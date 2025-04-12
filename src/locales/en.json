@@ -1,0 +1,37 @@
+{
+  "blog": {
+    "title": "Blog and CS",
+    "filterCaseStudies": "Case Studies",
+    "filterBlogs": "Blogs",
+    "readMore": "Read More",
+    "all": "All"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project"
+  },
+  "common": {
+    "languageSwitcher": "Switch to Serbian",
+    "backToBlog": "Back to Blog"
+  },
+  "landing": {
+    "welcome": "Welcome",
+    "aboutMe": "Hi There!",
+    "blogLink": "Blog",
+    "projectsLink": "Projects",
+    "aboutMeTitle": "Hi There!",
+    "aboutMePlaceholder1": "I'm Veljko Spasic, a fourth-year Software Engineering student at Singidunum University. I'm deeply passionate about crafting innovative solutions, constantly diving into the captivating world of AI, and turning creative ideas into reality. I thrive on the excitement and magic of building projects from scratch, and my curiosity often leads me into fascinating new technologies and startup ideas.",
+    "aboutMePlaceholder2": "One of my recent adventures involved exploring advanced AI techniques, from natural language processing to computer vision, aiming to create smarter, more intuitive systems that genuinely enhance human experiences.",
+    "currentlyTitle": "Currently, I am:",
+    "currentlyItem1": "Playing with gravity and something that (maybe) shouldn't land.",
+    "currentlyItem2": "Exploring exciting startup ideas and opportunities that challenge and inspire me.",
+    "currentlyItem3": "Building personal projects that blend creativity, technology, and my love for the process itself."
+  },
+  "introduction": {
+    "mainGreeting": "Hello I'm,",
+    "type1": "Veljko Spasic",
+    "type2": "transforming ideas into AI-powered projects",
+    "type3": "building startups behind the scenes",
+    "type4": "making rockets smarter, landing optional"
+  }
+}

@@ -1,0 +1,72 @@
+.project-card {
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden; /* Da bi border-radius radio na slici */
+  background-color: #2c2c2c; /* Malo svetlija pozadina od glavne */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Osigurava da sve kartice imaju istu visinu ako su u gridu */
+}
+
+.card-image-container {
+  width: 100%;
+  /* Fiksni aspect-ratio za slike */
+  aspect-ratio: 16 / 10; /* Možete podesiti odnos */
+  overflow: hidden; /* Sakriva delove slike koji prelaze */
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Skalira sliku da pokrije kontejner */
+  transition: transform 0.3s ease; /* Opcioni efekat na hover */
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.05); /* Blago uvećanje slike na hover kartice */
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Omogućava da ovaj deo raste i popuni prostor */
+}
+
+.card-title {
+  font-family: var(--font-header);
+  margin-bottom: 10px;
+}
+
+.card-tags {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background-color: #444;
+  color: #ccc;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.card-description {
+  margin-bottom: 15px;
+  flex-grow: 1;
+  color: #bbb;
+}
+
+.card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #8ab4f8;
+  margin-top: auto; /* Gura link na dno kartice */
+  align-self: flex-start; /* Poravnava link levo */
+}
+
+.card-link:hover {
+  text-decoration: underline;
+} 

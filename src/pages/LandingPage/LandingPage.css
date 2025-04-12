@@ -1,0 +1,130 @@
+.landing-page {
+  /* Može ostati prazno ako nema specifičnih stilova za celu stranicu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  align-items: start;
+}
+
+/* Intro Sekcija */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 90vh;
+  text-align: left;
+  padding-top: 25vh;
+  width: 100%;
+}
+
+.intro-heading-wrapper {
+  margin-bottom: 1rem;
+}
+
+.intro-heading {
+  font-family: var(--font-headerMain);
+  line-height: 1.1;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.static-h1 {
+  /* Nema posebnih stilova za sada */
+}
+
+.dynamic-h1 {
+  color: #00adb5;
+  min-height: 1.1em;
+}
+
+.intro-subheading {
+  font-family: var(--font-body);
+  margin-bottom: 1.5rem;
+  color: #aaa;
+  width: 100%;
+  text-align: left;
+}
+
+.intro-subheading-encrypted {
+  opacity: 0.5;
+  color: #666;
+}
+
+/* O meni Sekcija */
+.about-section {
+  padding: 20px 20px;
+  max-width: 1140px;
+  min-height: 65vh;
+  height: 100%;
+
+}
+
+.section-heading {
+  font-family: var(--font-headerH);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #00adb5;
+}
+
+.about-content p {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Dodatak za 'Currently, I am:' sekciju */
+.about-currently {
+  text-align: left; /* Već bi trebalo da bude podrazumevano, ali za svaki slučaj */
+  margin-top: 1.5em; /* Povećan razmak od gornjeg teksta */
+}
+
+.about-currently h4 {
+  /* Nema potrebe za posebnim stilom za h4 ako font nasleđuje od roditelja */
+  margin-bottom: 0.5em; /* Razmak između naslova i liste */
+  font-weight: bold; /* Opciono, ako želimo da istaknemo naslov */
+}
+
+.about-currently ul {
+  list-style-type: disc; /* Standardni bullet points */
+  padding-left: 20px; /* Uvlačenje liste */
+  margin-top: 0; /* Uklanjamo podrazumevani gornji margin liste */
+}
+
+.about-currently li {
+  margin-bottom: 0.5em; /* Razmak između stavki liste */
+}
+
+/* Responsivnost - primer, prilagodi po potrebi */
+@media (max-width: 768px) {
+  .about-currently ul {
+    padding-left: 15px; /* Manje uvlačenje na manjim ekranima */
+  }
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: var(--text-sm);
+  padding: 8px 12px;
+  color: #eee;
+  cursor: pointer;
+  font-family: var(--font-body);
+  z-index: 1000;
+}
+
+.language-switcher:hover {
+  background-color: #444;
+}
+
+.intro-subheading-container {
+  display: flex;
+  gap: 5px;
+}
+
+

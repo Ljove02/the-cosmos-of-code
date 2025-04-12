@@ -1,0 +1,37 @@
+{
+  "blog": {
+    "title": "Blog i CS",
+    "filterCaseStudies": "Studije Slučaja",
+    "filterBlogs": "Blogovi",
+    "readMore": "Pročitaj Više",
+    "all": "Svi"
+  },
+  "projects": {
+    "title": "Projekti",
+    "viewProject": "Pogledaj Projekat"
+  },
+  "common": {
+    "languageSwitcher": "Prebaci na Engleski",
+    "backToBlog": "Nazad na Blog"
+  },
+  "landing": {
+    "welcome": "Dobrodošli",
+    "aboutMe": "Zdravo!",
+    "blogLink": "Blog",
+    "projectsLink": "Projekti",
+    "aboutMeTitle": "Ćao!",
+    "aboutMePlaceholder1": "Ja sam Veljko Spasić, student četvrte godine Softverskog inženjerstva na Univerzitetu Singidunum. Imam snažnu strast prema stvaranju inovativnih rešenja, stalno istražujem svet veštačke inteligencije i uživam u tome da pretvaram kreativne ideje u funkcionalne projekte. Volim magiju stvaranja iz nule – taj osećaj dok gradim nešto novo je za mene nezamenjiv :)",
+    "aboutMePlaceholder2": "Jedan od mojih nedavnih poduhvata uključuje istraživanje naprednih AI tehnika, od obrade prirodnog jezika do računarskog vida, s ciljem da se razviju pametniji i intuitivniji sistemi koji poboljšavaju svakodnevno korisničko iskustvo.",
+    "currentlyTitle": "Trenutno radim na:",
+    "currentlyItem1": "Igram se gravitacijom i nečim što (ne) bi trebalo da sleti.",
+    "currentlyItem2": "Razvijanju ideja za startape koji me izazivaju i inspirišu.",
+    "currentlyItem3": "Izradi ličnih projekata koji spajaju kreativnost, tehnologiju i ljubav prema samom procesu."
+  },
+  "introduction": {
+    "mainGreeting": "Hello I'm,",
+    "type1": "Veljko Spasic",
+    "type2": "transforming ideas into AI-powered projects",
+    "type3": "building startups behind the scenes",
+    "type4": "making rockets smarter, landing optional"
+  }
+}

@@ -1,0 +1,142 @@
+.blog-template-page {
+  max-width: 1400px; /* Standardna širina za čitanje teksta */
+  margin: 40px auto;
+  padding: 20px;
+
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.post-title-main {
+  font-family: var(--font-header);
+  margin-bottom: 10px;
+}
+
+.post-meta-main {
+  color: #aaa;
+}
+
+.post-meta-main span + span {
+  margin-left: 15px;
+}
+
+.post-content-main {
+  color: #ddd;
+}
+
+/* Stilovi za elemente unutar sadržaja (koji dolazi iz HTML-a) */
+.post-content-main h2 {
+  font-family: var(--font-header);
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.post-content-main h3 {
+  font-family: var(--font-header);
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+}
+
+.post-content-main p {
+  margin-bottom: 1.2em;
+}
+
+.post-content-main strong {
+  font-weight: bold;
+}
+
+.post-content-main em {
+  font-style: italic;
+}
+
+.post-content-main ul,
+.post-content-main ol {
+  margin-left: 20px;
+  margin-bottom: 1.2em;
+}
+
+.post-content-main li {
+  margin-bottom: 0.5em;
+}
+
+.post-content-main a {
+  color: #8ab4f8;
+  text-decoration: none;
+}
+
+.post-content-main a:hover {
+  text-decoration: underline;
+}
+
+.post-content-main pre {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Za horizontalno skrolovanje koda */
+  margin-bottom: 1.2em;
+}
+
+.post-content-main code {
+  font-family: var(--font-header);
+  font-size: 0.9em;
+}
+
+/* Uklanjamo default marginu sa prvog elementa posle naslova */
+.post-content-main > *:first-child {
+    margin-top: 0;
+}
+
+.post-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.back-link {
+  font-family: var(--font-body);
+  color: #aaa;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #ccc;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+  .post-title-main {
+    font-size: 2.2rem;
+  }
+  .post-content-main {
+    font-size: 1rem;
+  }
+  .post-content-main h2 {
+    font-size: 1.6rem;
+  }
+  .post-content-main h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-template-page {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .post-title-main {
+    font-size: 1.8rem;
+  }
+} 

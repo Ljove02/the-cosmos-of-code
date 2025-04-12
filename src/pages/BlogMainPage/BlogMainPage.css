@@ -1,0 +1,160 @@
+/* Osnovni stilovi za stranicu */
+.blog-main-page {
+  /* Koristi celu širinu, kontrolisano spoljašnjim kontejnerom ako postoji */
+  /* max-width: 900px; - Uklonjeno, može se dodati po potrebi */
+  margin: 60px auto 40px auto; /* Više gornje margine */
+  padding: 0 20px; /* Samo horizontalni padding */
+  font-family: 'Roboto Mono', monospace; /* Osnovni font */
+}
+
+/* Naslov sekcije */
+.blog-list-title {
+  text-align: left; /* Poravnanje levo */
+  margin-bottom: 20px; /* Razmak ispod naslova */
+  font-family: 'Roboto Mono', monospace;
+  font-size: var(--fs-xl);
+  font-weight: bold; /* Ili normal/light po želji */
+  /* Uklonjen .page-title stil */
+}
+
+/* Filteri */
+.filter-controls {
+  display: flex;
+  justify-content: flex-start; /* Poravnanje levo */
+  gap: 25px; /* Veći razmak */
+  margin-bottom: 60px;
+}
+
+/* Stil dugmadi za filter */
+.filter-button {
+  padding: 0; /* Bez paddinga */
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  border: none; /* Bez bordera */
+  background-color: transparent; /* Bez pozadine */
+  color: inherit; /* Nasleđuje boju teksta */
+  font-size: var(--fs-base);
+  opacity: 0.7; /* Blago providni */
+  transition: opacity 0.2s;
+}
+
+.filter-button:hover {
+  opacity: 1; /* Potpuno vidljivi na hover */
+  background-color: transparent; /* Osiguravamo da nema pozadine na hover */
+}
+
+.filter-button.active {
+  opacity: 1;
+  font-weight: bold; /* Istaknemo aktivni */
+  color: #00adb5; /* Boja za aktivni filter */
+  /* Možemo dodati i liniju ispod */
+  /* text-decoration: underline; */
+  /* text-underline-offset: 4px; */
+  background-color: transparent; /* Osiguravamo da nema pozadine */
+  border: none;
+}
+
+/* Lista postova */
+.posts-list {
+  display: flex; /* Koristimo flex za kolonu */
+  flex-direction: column;
+  gap: 0; /* Nema razmaka između, kontrolišemo sa marginom */
+  /* Uklonjen grid stil */
+}
+
+/* Minimalistički prikaz jednog posta */
+.post-item-minimal {
+  display: flex;
+  justify-content: space-between; /* Title levo, Date desno */
+  align-items: center; /* Vertikalno poravnanje */
+  padding-bottom: 0.75em; /* Razmak od linije */
+  margin-bottom: 1.25em; /* Razmak ispod linije */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Tanka bela providna linija */
+  font-family: 'Roboto Mono', monospace;
+  /* Uklonjeni stari .post-item stilovi (border, padding, radius) */
+}
+
+/* Stil za link naslova posta */
+.blog-item-link {
+  text-decoration: none; /* Uklanja podrazumevanu liniju */
+  color: inherit; /* Nasleđuje boju od roditelja (minimal item) */
+  transition: color 0.2s ease-out; /* Glatka promena boje na hover */
+}
+
+.blog-item-link:hover .blog-item-title {
+   color: #00adb5; /* Promena boje naslova unutar linka na hover */
+   /* Može i direktno na .blog-item-link:hover { color: ...; } */
+}
+
+/* Stil za naslov posta (unutar linka) */
+.blog-item-title {
+  font-size: var(--fs-base);
+  /* Dodatni stilovi po potrebi */
+}
+
+/* Stil za datum posta */
+.blog-item-date {
+  font-size: var(--fs-base);
+  color: #aaa; /* Malo svetlija boja za datum */
+  white-space: nowrap; /* Sprečava prelamanje datuma */
+  margin-left: 20px; /* Osigurava mali razmak od naslova ako je naslov dug */
+}
+
+/* Poruka kada nema postova */
+.no-posts-message {
+  font-family: 'Roboto Mono', monospace;
+  color: #aaa;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Uklanjamo nepotrebne stare stilove */
+/* .post-title, .post-meta, .post-excerpt, .read-more-link { ... } */
+
+/* Responzivnost - ZADRŽAVAMO postojeće query-je, ali prilagođavamo stilove unutar njih ako treba */
+
+@media (max-width: 768px) {
+  .blog-list-title {
+    font-size: 2rem;
+  }
+  .filter-controls {
+    gap: 15px;
+  }
+  /* Filter dugmad ostaju ista */
+  .post-item-minimal {
+     padding-bottom: 0.6em;
+     margin-bottom: 1em;
+  }
+  .blog-item-title, .blog-item-date {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-main-page {
+    padding: 0 15px;
+    margin: 40px auto 20px auto;
+  }
+  .filter-controls {
+    flex-wrap: wrap; /* Prelamanje ostaje */
+    gap: 10px 15px; /* Podešen gap za prelomljene redove */
+    justify-content: center; /* Centriramo filtere na manjim ekranima */
+  }
+  .blog-list-title {
+      font-size: var(--fs-xl);
+      text-align: center; /* Centriramo naslov na najmanjim ekranima */
+  }
+  .post-item-minimal {
+    /* Mogućnost da idu jedan ispod drugog ako su predugački */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* gap: 5px; */
+  }
+   .blog-item-title {
+     font-size: var(--fs-base);
+   }
+   .blog-item-date {
+       font-size: var(--fs-base);
+       margin-left: 10px;
+   }
+} 

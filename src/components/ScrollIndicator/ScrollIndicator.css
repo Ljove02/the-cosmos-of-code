@@ -1,0 +1,80 @@
+.scroll-indicator-wrap {
+  position: fixed;
+  bottom: 20px; /* Udaljenost od dna */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* Koristićemo flex i dalje */
+  flex-direction: row-reverse; /* Zadržavamo raspored */
+  align-items: center;
+  z-index: 10; /* Iznad pozadine, ali ispod npr. modala */
+
+  /* Uvek počinje nevidljivo */
+  opacity: 0;
+  pointer-events: none; /* Ne reaguje na klikove dok je nevidljiv */
+
+  /* Definisana tranzicija za fade efekat */
+  transition: opacity 0.2s ease-out;
+}
+
+/* Klasa za prikazivanje indikatora */
+.scroll-indicator-wrap.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-indicator-mouse {
+  /* --- Podesiva veličina i izgled --- */
+  width: 22px;
+  height: 35px;
+  border: 1px solid white; /* Boja ivice */
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.scroll-indicator-scroller {
+  /* --- Podesiva veličina i izgled --- */
+  width: 4px;
+  height: 4px;
+  border-radius: 12px;
+  background: white; /* Boja tačkice */
+  position: relative;
+  /* --- Animacija --- */
+  /* Početna pozicija i ostali parametri se definišu u @keyframes */
+  /* animation: scrolls 1.3s ease-out infinite; */
+  /* Primenjujemo sa vendor prefixima za širu kompatibilnost */
+  -webkit-animation: scrolls 1.3s ease-out infinite;
+          animation: scrolls 1.3s ease-out infinite;
+}
+
+.scroll-indicator-label {
+  /* --- Podesiva veličina i izgled --- */
+  font-size: 14px;
+  color: white; /* Boja teksta */
+  /* Koristimo --font-body jer je JetBrains Mono sada --font-headerMain */
+  font-family: var(--font-body);
+}
+
+/* --- Podesiva animacija --- */
+/* Originalna animacija */
+/* @keyframes scrolls {
+  0% { top: 18px; opacity: 1; height: 4px; }
+  95% { top: 5px; opacity: 0; height: 8px; }
+  100% { top: 18px; opacity: 1; height: 4px; }
+} */
+
+/* Verzija sa prefixima */
+@-webkit-keyframes scrolls {
+  0% { top: 18px; opacity: 1; height: 4px; }
+  95% { top: 5px; opacity: 0; height: 8px; }
+  100% { top: 18px; opacity: 1; height: 4px; }
+}
+
+@keyframes scrolls {
+  0% { top: 18px; opacity: 1; height: 4px; }
+  95% { top: 5px; opacity: 0; height: 8px; }
+  100% { top: 18px; opacity: 1; height: 4px; }
+}
+
+/* Sakrivanje na mobilnim uređajima se sada radi kroz @media query */

@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* Glatkiji izgled na Mac-u i WebKit-u */
+  -moz-osx-font-smoothing: grayscale; /* Firefox na Mac-u */
+  text-rendering: optimizeLegibility; /* Optimizacija čitljivosti */
+  font-feature-settings: "liga" off;
+}
+
+
+/* Definišemo HSL varijable ako već ne postoje globalno */
+:root {
+  /* Osnovne boje i border */
+  --background: 240 10% 3.9%;
+  --border: 240 3.7% 15.9%;
+  --primary-hsl: 210 40% 98%;
+
+  /* Font varijable */
+  --font-headerMain: Helvetica, Arial, sans-serif;
+  --font-body: 'Roboto Mono', monospace;
+  --font-headerH: Helvetica, Arial, sans-serif;
+  
+  /* Fluidne Veličine Fonta */
+  --fs-sm: clamp(0.8rem, 0.08vi + 0.78rem, 0.84rem);
+  --fs-base: 1rem;
+  --fs-md: clamp(1.25rem, 0.45vi + 1.14rem, 1.5rem);
+  --fs-lg: clamp(1.56rem, 0.79vi + 1.36rem, 2rem);
+  --fs-xl: clamp(1.95rem, 1.29vi + 1.63rem, 2.66rem);
+  --fs-xxl: clamp(2.44rem, 2.02vi + 1.94rem, 3.55rem);
+  --fs-xxxl: clamp(3.05rem, 3.06vi + 2.29rem, 4.73rem);
+
+  /* Ostale globalne postavke */
+  line-height: 1.6; /* Malo povećan line-height za bolju čitljivost */
+  font-weight: 400;
+  color-scheme: dark; /* Postavljamo podrazumevanu šemu na tamnu */
+  color: rgba(255, 255, 255, 0.87);
+  background-color: hsl(var(--background)); /* Koristimo HSL varijablu */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+/* --- Fluidna Tipografija --- */
+html {
+  /* Osnovna veličina fonta za REM jedinice */
+  /* Koristimo clamp da osiguramo min 14px i max 16px (1rem) */
+  font-size: clamp(0.875rem, 0.2vi + 0.8rem, 1rem);
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer i Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  /* Osnovni tekst koristi --fs-base, koji sada ima min 16px, max ~18px */
+  /* Ako želite da body tekst striktno prati html (max 16px), koristite 1rem */
+  font-size: var(--fs-base); /* Koristi fluidnu bazu definisanu gore */
+  /* Alternativa: font-size: 1rem; // Max 16px */
+}
+
+/* Primenjujemo fluidne veličine i NOVI font na naslove */
+h1 {
+  font-family: var(--font-headerMain); /* Koristi novi font */
+  /* Ažuriran clamp za h1 da max bude ~70px (4.375rem) */
+  /* Možemo koristiti --fs-xxxl ili definisati novi clamp specifično */
+  font-size: clamp(2.5rem, 7vw, 4.375rem); /* Min 40px, raste sa 7vw, max 70px */
+  line-height: 1.1; /* Smanjen razmak za velike naslove */
+  margin-bottom: 0.5rem; /* Manji razmak ispod h1 */
+}
+
+h2 {
+  font-family: var(--font-headerMain); /* Koristi novi font */
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-family: var(--font-headerMain); /* Koristi novi font */
+  font-size: var(--fs-lg);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+/* Dodati po potrebi za h4, h5, h6 */
+
+p {
+  margin-bottom: 1rem; /* Razmak između paragrafa */
+  max-width: 97ch; /* Ograničavanje širine paragrafa za bolju čitljivost */
+}
+
+a {
+  font-weight: 500;
+  color: #8ab4f8; /* Malo čitljivija plava */
+  text-decoration: none; /* Uklanjamo podrazumevano podvlačenje */
+}
+a:hover {
+  color: #00adb5;
+  text-decoration: underline; /* Vraćamo podvlačenje na hover */
+}
+
+/* Resetujemo font-size za dugme da koristi `rem` umesto `em` */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 0.8rem;
+  /* Dugmad koriste osnovnu fluidnu veličinu */
+  font-size: var(--fs-base);
+  /* Alternativa: font-size: 1rem; // Max 16px */
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+/* Uklanjamo @media (prefers-color-scheme: light) jer smo postavili dark kao default */
+/* Ako želite podršku za light mode, treba je implementirati drugačije (npr. klasa na body) */
+
+/* Stilovi za pozadinsku sliku */
+.background-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3; /* Najdublji sloj */
+  pointer-events: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Novi stilovi za overlay */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #05060f; /* Tamna boja */
+  z-index: -2; /* Između slike i čestica */
+  pointer-events: none;
+  /* Inicijalni opacity se postavlja iz JS-a, ali možemo dodati transition */
+  /* transition: opacity 0.4s ease-in-out; */ /* Opciono: ako želimo glatku tranziciju i kad JS ažurira */
+  /* Ako ne dodamo transition, promena opacity-a će biti trenutna, ali progresivna zbog JS-a */
+}
+
+/* Wrapper za sadržaj */
+.content-wrapper {
+  /* position: relative; z-index: 1; display: flex; ... */
+  /* Stilovi su već inline u App.jsx, osiguravaju da je iznad pozadina */
+}

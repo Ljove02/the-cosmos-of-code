@@ -1,0 +1,267 @@
+/* Definišemo HSL varijable ako već ne postoje globalno */
+
+
+/* Osnovni stilovi za Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Ažurirana pozadina sa blur efektom */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 30px;
+  font-family: var(--font-header);
+  color: #eee;
+  /* Uklanjamo transition za background-color jer je sada uvek polutransparentan */
+}
+
+.nav-link-separator {
+  margin-bottom: 0rem;
+}
+/* Kontejner za poravnanje elemenata */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Leva sekcija sada sadrži i linkove na desktopu */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Razmak između logoa i linkova */
+}
+
+/* Srednja sekcija (Desktop) - sada sakrivena ili uklonjena iz HTML-a */
+/* .navbar-center { ... } */
+
+/* Klasa za desktop linkove unutar leve sekcije */
+.navbar-center-desktop {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Razmak između linkova */
+}
+
+/* Desna sekcija */
+.navbar-right {
+  display: flex; /* Dodajemo ponovo jer je bilo uklonjeno u media query */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Stil za Contact Me dugme na hover */
+.navbar-right .contact-shiny-button:hover {
+  /* Koristi URL do PNG fajla. Dodaj X i Y koordinate za hotspot. */
+  /* Primer: Postavljanje hotspota na 16px, 16px (centar za 32x32 sliku) */
+  cursor: url('/src/assets/cursors/Rocket.png') 16 16, auto;
+}
+
+/* Logo/Ime */
+.navbar-logo {
+  color: inherit;
+  text-decoration: none;
+  /* Postavljamo na 1rem (max 16px) ili blago veće ako želimo */
+  font-size: 1rem; /* ili npr. var(--fs-md) ako treba da bude veći */
+  font-weight: bold;
+}
+
+/* Navigacioni Linkovi (Desktop) */
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  /* Koristi osnovnu veličinu (max 16px) */
+  font-size: 1rem;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-link.active {
+  /* Stil za aktivni link */
+}
+
+/* Dugme (Desktop) - ShinyButton će naslediti veličinu iz globalnog button stila (fs-base) */
+/* Ne treba poseban font-size ovde */
+
+/* Jezički Switcher */
+.language-switcher-nav {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem; /* Zadržavamo veličinu fonta radi poravnanja ako je potrebno */
+  cursor: pointer;
+  padding: 0; /* Uklanjamo padding da slika lepo legne */
+  line-height: 0; /* Pomaže kod vertikalnog poravnanja slike */
+}
+
+/* Dodajemo klasu za stilizovanje dugmeta sa zastavom */
+.flag-button {
+  /* Opciono: Dodati malo paddinga ako želimo razmak oko zastave */
+  /* padding: 2px; */
+}
+
+.flag-icon {
+  display: block; /* Uklanja potencijalni razmak ispod slike */
+  width: 28px; /* Definišemo željenu širinu zastave */
+  height: auto; /* Visina se automatski prilagođava */
+  /* Opciono: Zaobljene ivice */
+  /* border-radius: 3px; */
+}
+
+/* Mobilni elementi inicijalno sakriveni */
+.mobile-menu-icon {
+  /* font-size: 1.8rem; */ /* Možda smanjiti malo? npr. 1.5rem */
+  font-size: 1.5rem;
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar-right-mobile {
+    display: none;
+}
+
+/* Mobilni Side Nav - Stilovi ostaju uglavnom isti */
+.mobile-nav-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  /* Koristimo istu pozadinu kao navbar za konzistentnost, ali bez transparentnosti */
+  background-color: hsl(234deg 50% 4% / 40%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* Možemo dodati blagi blur i ovde ako želimo */
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
+  z-index: 110;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-menu.open {
+  left: 0;
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  z-index: 105;
+  /* Dodajemo transition za glatko pojavljivanje/nestajanje */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+.mobile-nav-menu.open + .mobile-nav-overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-nav-content {
+  padding: 60px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: var(--font-header);
+}
+
+.close-menu-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-nav-link {
+  color: #eee;
+  text-decoration: none;
+  /* Koristi fs-md za malo veće linkove u meniju */
+  font-size: var(--fs-base);
+}
+
+.mobile-nav-link.logo-link {
+    /* Koristi fs-lg za veći logo u meniju */
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-lg);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.nav-link-separator{
+  margin-bottom: 0rem !important;
+}
+
+/* .mobile-nav-link.contact-link - ShinyButton će naslediti veličinu */
+
+.mobile-nav-link.active {
+}
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+.logo-image{
+  width: 64px;
+  object-fit: contain;  
+}
+
+/* Media Query za Mobile */
+@media (max-width: 930px) {
+  /* Sakrivamo desktop linkove i desni deo */
+  .navbar-center-desktop,
+  .navbar-right {
+    display: none;
+  }
+
+  /* Sakrivamo logo na mobilnom */
+  .navbar-logo {
+      display: none;
+  }
+
+  /* Prikazujemo hamburger i mobilni jezički switcher */
+  .mobile-menu-icon {
+    display: block;
+    /* Ne treba margin-left jer nema logoa */
+  }
+
+  .navbar-right-mobile {
+      display: flex;
+      align-items: center;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+      flex-grow: 0; /* Vraćamo da ne zauzima sav prostor */
+      gap: 0; /* Uklanjamo gap */
+      /* Samo hamburger ostaje u .navbar-left */
+  }
+
+   .navbar {
+       padding: 15px 20px;
+       /* Opciono: Definisati --background i --border ako nisu globalno */
+   }
+   
+}

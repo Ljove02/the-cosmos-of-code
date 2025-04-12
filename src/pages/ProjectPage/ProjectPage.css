@@ -1,0 +1,42 @@
+.project-page {
+  max-width: 1200px; /* Širi kontejner za projekte */
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px; /* Veći razmak ispod naslova */
+  font-size: 2.5rem;
+  font-family: var(--font-header);
+}
+
+.projects-grid {
+  display: grid;
+  /* Automatski broj kolona zavisno od širine ekrana */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Razmak između kartica */
+}
+
+/* Responzivnost za ProjectPage */
+@media (max-width: 768px) {
+  .project-page {
+    padding: 15px;
+  }
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .projects-grid {
+    /* Smanjujemo minimalnu širinu kartice na manjim ekranima */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    /* Jedna kolona na najmanjim ekranima */
+    grid-template-columns: 1fr;
+  }
+} 

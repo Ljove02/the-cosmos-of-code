@@ -1,0 +1,14 @@
+#particleCanvas {
+  position: fixed; /* Fiksiramo canvas u viewportu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Iznad overlay-a, ispod sadržaja */
+  pointer-events: none; /* Onemogućavamo interakciju miša sa canvasom */
+  /* background: #05060f; */ /* Uklonjeno - overlay daje pozadinu */
+  /* Inicijalni opacity će biti kontrolisan iz JS-a */
+  opacity: 0; /* Počinjemo sa nevidljivim česticama */
+  transition: opacity 0.5s ease-in-out; /* Dodajemo glatku tranziciju */
+  /* display: none; */ /* Uklonjeno */
+} 

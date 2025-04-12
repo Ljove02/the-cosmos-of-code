@@ -1,0 +1,17 @@
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px; /* Mali razmak od teksta */
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Opciono: Osigurava da kontejner zauzme prostor čak i kad je tekst prazan */
+.typing-container {
+    min-height: 1.1em; /* Visina jednog reda teksta */
+    display: inline-block;
+}

@@ -1,0 +1,24 @@
+.footer-container {
+  width: 100%;
+  padding: 2rem 1rem 0;  /* Vertikalni i horizontalni padding (koristimo rem) */
+  background-color: transparent; /* Eksplicitno transparentna pozadina */
+  text-align: center; /* Centriramo tekst */
+  margin-top: auto; /* Gura footer na dno ako je sadržaj kraći od visine ekrana */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-text,
+.footer-copyright {
+  color: inherit; /* Nasleđuje boju iz globalnih stilova */
+  font-family: var(--font-body); /* Koristimo body font */
+  font-size: var(--fs-sm); /* Koristimo malu fluidnu veličinu fonta */
+  line-height: 1.5; /* Malo veći razmak između redova */
+}
+
+.footer-text {
+  margin-bottom: 0.5rem; /* Mali razmak između dva reda teksta */
+}
