@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useLanguage, useTranslations } from '../../hooks/useTranslations';
-import { allPosts } from '../../data/mockPosts'; // Import podataka
+import { allPosts } from '../../data/mockPosts.js'; // Import podataka
 import './BlogTemplatePage.css';
 
 function BlogTemplatePage() {
@@ -52,7 +52,8 @@ function BlogTemplatePage() {
       <header className="post-header">
         <h1 className="post-title-main">{postData.title[language]}</h1>
         <p className="post-meta-main">
-          <span>{categoryText}</span> | <span>{postData.date}</span>
+          <span>{categoryText} | <span className="post-date-text">{postData.date}</span></span>
+          <span className="post-read-time">{t.blog.readingTime} <span className="post-read-time-text">{postData.readTime[language]}</span></span>
         </p>
       </header>
 

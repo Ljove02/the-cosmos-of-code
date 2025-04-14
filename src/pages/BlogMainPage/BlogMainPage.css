@@ -7,21 +7,73 @@
   font-family: 'Roboto Mono', monospace; /* Osnovni font */
 }
 
-/* Naslov sekcije */
-.blog-list-title {
-  text-align: left; /* Poravnanje levo */
-  margin-bottom: 20px; /* Razmak ispod naslova */
+/* ===== Specifični stilovi za tagove unutar Blog Main Page ===== */
+
+/* H2 naslov */
+.blog-main-page h2.blog-list-title {
+  margin-bottom: 20px;
   font-family: 'Roboto Mono', monospace;
   font-size: var(--fs-xl);
-  font-weight: bold; /* Ili normal/light po želji */
-  /* Uklonjen .page-title stil */
+  font-weight: bold;
+  text-align: left;
 }
+
+/* P za "no posts" poruku */
+.blog-main-page p.no-posts-message {
+  font-family: 'Roboto Mono', monospace;
+  color: inherit;
+  text-align: center;
+  margin-top: 40px;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  max-width: initial;
+}
+
+/* A link za naslov bloga */
+.blog-main-page a.blog-item-link {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  /* font-size treba da bude definisan na .blog-item-title unutar linka */
+}
+.blog-main-page a.blog-item-link:hover .blog-item-title {
+  color: #00adb5;
+}
+
+/* BUTTON za filtere */
+.blog-main-page button.filter-button {
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.blog-main-page button.filter-button:hover {
+  opacity: 1;
+  background-color: transparent;
+  border-color: transparent;
+}
+.blog-main-page button.filter-button.active {
+  opacity: 1;
+  font-weight: bold;
+  color: #00adb5;
+  background-color: transparent;
+  border: none;
+}
+
+/* ============================================================== */
 
 /* Filteri */
 .filter-controls {
   display: flex;
-  justify-content: flex-start; /* Poravnanje levo */
-  gap: 25px; /* Veći razmak */
+  justify-content: flex-start;
+  gap: 25px;
   margin-bottom: 60px;
 }
 
@@ -56,54 +108,40 @@
 
 /* Lista postova */
 .posts-list {
-  display: flex; /* Koristimo flex za kolonu */
+  display: flex;
   flex-direction: column;
-  gap: 0; /* Nema razmaka između, kontrolišemo sa marginom */
-  /* Uklonjen grid stil */
+  gap: 0;
 }
 
 /* Minimalistički prikaz jednog posta */
 .post-item-minimal {
   display: flex;
-  justify-content: space-between; /* Title levo, Date desno */
-  align-items: center; /* Vertikalno poravnanje */
-  padding-bottom: 0.75em; /* Razmak od linije */
-  margin-bottom: 1.25em; /* Razmak ispod linije */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Tanka bela providna linija */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75em;
+  margin-bottom: 1.25em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-family: 'Roboto Mono', monospace;
-  /* Uklonjeni stari .post-item stilovi (border, padding, radius) */
-}
-
-/* Stil za link naslova posta */
-.blog-item-link {
-  text-decoration: none; /* Uklanja podrazumevanu liniju */
-  color: inherit; /* Nasleđuje boju od roditelja (minimal item) */
-  transition: color 0.2s ease-out; /* Glatka promena boje na hover */
-}
-
-.blog-item-link:hover .blog-item-title {
-   color: #00adb5; /* Promena boje naslova unutar linka na hover */
-   /* Može i direktno na .blog-item-link:hover { color: ...; } */
 }
 
 /* Stil za naslov posta (unutar linka) */
 .blog-item-title {
-  font-size: var(--fs-base);
-  /* Dodatni stilovi po potrebi */
+  font-size: var(--fs-base); /* Ispravljena varijabla */
 }
 
 /* Stil za datum posta */
 .blog-item-date {
-  font-size: var(--fs-base);
-  color: #aaa; /* Malo svetlija boja za datum */
-  white-space: nowrap; /* Sprečava prelamanje datuma */
-  margin-left: 20px; /* Osigurava mali razmak od naslova ako je naslov dug */
+  font-size: var(--fs-base); /* Ispravljena varijabla */
+  color: #00adb5; /* Vraćamo na sivu boju */
+  white-space: nowrap;
+  margin-left: 20px;
 }
 
 /* Poruka kada nema postova */
 .no-posts-message {
   font-family: 'Roboto Mono', monospace;
-  color: #aaa;
+  color: inherit;
   text-align: center;
   margin-top: 40px;
 }
@@ -114,20 +152,24 @@
 /* Responzivnost - ZADRŽAVAMO postojeće query-je, ali prilagođavamo stilove unutar njih ako treba */
 
 @media (max-width: 768px) {
-  .blog-list-title {
-    font-size: 2rem;
+  .blog-main-page h2.blog-list-title {
+    font-size: var(--fs-lg); /* Ispravljena varijabla, manja veličina */
+    text-align: left; /* Osiguravamo poravnanje */
   }
   .filter-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     gap: 15px;
   }
-  /* Filter dugmad ostaju ista */
   .post-item-minimal {
      padding-bottom: 0.6em;
      margin-bottom: 1em;
   }
-  .blog-item-title, .blog-item-date {
-      font-size: 0.9rem;
+  .blog-item-title {
+    text-align: left;
   }
+  /* Nema potrebe za posebnim font-size ovde ako koristimo --fs-base generalno */
 }
 
 @media (max-width: 480px) {
@@ -136,25 +178,24 @@
     margin: 40px auto 20px auto;
   }
   .filter-controls {
-    flex-wrap: wrap; /* Prelamanje ostaje */
-    gap: 10px 15px; /* Podešen gap za prelomljene redove */
-    justify-content: center; /* Centriramo filtere na manjim ekranima */
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    justify-content: flex-start;
   }
-  .blog-list-title {
-      font-size: var(--fs-xl);
-      text-align: center; /* Centriramo naslov na najmanjim ekranima */
+  .blog-main-page h2.blog-list-title {
+      font-size: var(--fs-lg); /* Manji font i ovde */
+      text-align: left;
   }
   .post-item-minimal {
-    /* Mogućnost da idu jedan ispod drugog ako su predugački */
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* gap: 5px; */
+    flex-direction: column; /* Prebacujemo u kolonu na najmanjim ekranima */
+    align-items: flex-start; /* Poravnavamo elemente na početak kolone */
+    gap: 5px; /* Mali razmak između naslova i datuma u koloni */
   }
-   .blog-item-title {
-     font-size: var(--fs-base);
-   }
+   
    .blog-item-date {
-       font-size: var(--fs-base);
-       margin-left: 10px;
+       margin-left: 0; /* Nema smisla margin-left u koloni */
    }
+   .blog-item-title {
+    text-align: left;
+  }
 } 

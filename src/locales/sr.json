@@ -4,7 +4,9 @@
     "filterCaseStudies": "Studije Slučaja",
     "filterBlogs": "Blogovi",
     "readMore": "Pročitaj Više",
-    "all": "Svi"
+    "all": "Svi",
+    "no-posts-message": "Nema postova za prikaz u ovoj kategoriji.",
+    "readingTime": "Vreme Čitanja: "
   },
   "projects": {
     "title": "Projekti",

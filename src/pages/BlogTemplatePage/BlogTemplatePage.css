@@ -1,49 +1,79 @@
 .blog-template-page {
-  max-width: 1400px; /* Standardna širina za čitanje teksta */
-  margin: 40px auto;
+  -webkit-font-smoothing: antialiased;
+  max-width: 1050px; /* Standardna širina za čitanje teksta */
+  margin: 60px auto 40px auto; /* Veća gornja margina */
   padding: 20px;
-
+  font-family: var(--font-body); /* Osnovni font za celu stranicu */
+  text-rendering: optimizeLegibility;
+  background-color: #05060f;
 }
 
 .post-header {
   text-align: center;
   margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #444;
+  padding-bottom: 40px;
 }
 
 .post-title-main {
+  text-align: left;
   font-family: var(--font-header);
   margin-bottom: 10px;
+  color: #00adb5;
 }
 
 .post-meta-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: left;
   color: #aaa;
 }
 
-.post-meta-main span + span {
-  margin-left: 15px;
+.post-read-time {
+  font-family: var(--font-body);
+  color: #aaa;
+  margin-top: 10px;
 }
 
 .post-content-main {
+  text-align: left;
   color: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: left;
+}
+
+.post-content-main > *:first-child{
+  font-weight: bold;
 }
 
 /* Stilovi za elemente unutar sadržaja (koji dolazi iz HTML-a) */
 .post-content-main h2 {
-  font-family: var(--font-header);
-  margin-top: 2em;
+  color: #00adb5;
+  font-family: var(--font-header); /* Preuzeto iz globalnog h2 */
+  font-size: var(--fs-lg);
+  line-height: 1.3;
+  margin-top: 1em;
   margin-bottom: 1em;
+  font-weight: 600;
+  letter-spacing: 0rem;
 }
 
 .post-content-main h3 {
-  font-family: var(--font-header);
+  font-family: var(--font-headerMain); /* Preuzeto iz globalnog h3 */
+  font-size: var(--fs-lg);
+  line-height: 1.4;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
 }
 
 .post-content-main p {
+  font-family: var(--font-header); /* Osiguravamo */
+  font-size: var(--fs-base); /* Osiguravamo */
+  line-height: 1.6;
   margin-bottom: 1.2em;
+  max-width: 100%; /* Ograničenje širine za pasuse u sadržaju */
 }
 
 .post-content-main strong {
@@ -65,11 +95,13 @@
 }
 
 .post-content-main a {
+  font-weight: 500; /* Preuzeto iz globalnog a */
   color: #8ab4f8;
   text-decoration: none;
 }
 
 .post-content-main a:hover {
+  color: #00adb5;
   text-decoration: underline;
 }
 
@@ -94,13 +126,13 @@
 .post-footer {
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #444;
-  text-align: center;
+  text-align: left;
+  color: #00adb5;
 }
 
 .back-link {
   font-family: var(--font-body);
-  color: #aaa;
+  color: #00adb5;
   text-decoration: none;
 }
 
@@ -129,6 +161,18 @@
   .post-content-main h3 {
     font-size: 1.4rem;
   }
+  
+
+
+  /* Povećavamo slike na mobilnim uređajima */
+  .post-content-main-image .post-content-main_image_img,
+  .post-content-main-image .post-content-main_image_img_2,
+  .post-content-main-image .post-content-main_image_img_3,
+  .post-content-main-image .post-content-main_image_img_4,
+  .post-content-main-image .post-content-main_image_img_5,
+  .post-content-main-image .post-content-main_image_img_6 {
+    max-width: 95%; /* Veći procenat za mobilne */
+  }
 }
 
 @media (max-width: 480px) {
@@ -139,4 +183,137 @@
   .post-title-main {
     font-size: 1.8rem;
   }
+
+  /* Stilovi za slike nasleđeni iz 768px su verovatno dovoljni, */
+  /* ali ako želimo još veće na najmanjim ekranima, možemo dodati: */
+  /*
+  .post-content-main-image .post-content-main_image_img,
+  .post-content-main-image .post-content-main_image_img_2,
+  ...
+  {
+    max-width: 100%;
+  }
+  */
+}
+
+/* ===== Specifični stilovi za tagove unutar Blog Template Page ===== */
+
+/* Stil za glavni H1 naslov posta */
+.blog-template-page h1.post-title-main {
+  font-family: var(--font-header); /* Preuzeto iz globalnog h1 */
+  font-size: var(--fs-xl); /* Preuzeto iz globalnog h1 */
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-align: left; /* Već postavljeno */
+  color: #00adb5; /* Već postavljeno */
+  font-weight: 600;
+}
+
+/* Stil za P tag u meta podacima */
+.blog-template-page p.post-meta-main {
+  font-family: var(--font-body); /* Osiguravamo font */
+  font-size: var(--fs-base); /* Osnovna veličina */
+  line-height: 1.6;
+  color: #aaa;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 0; /* Uklanjamo donju marginu za ovaj specifični P */
+  max-width: initial; /* Nema ograničenja širine */
+  text-align: left;
+}
+
+/* Stil za A link u footeru */
+.blog-template-page a.back-link {
+  font-family: var(--font-body);
+  font-weight: 500; /* Iz globalnog A */
+  color: #00adb5;
+  text-decoration: none;
+  
+}
+
+.blog-main-page a.blog-item-link{
+  font-family: var(--font-body);
+  font-weight: 500; /* Iz globalnog A */
+  color: #aaa;
+  text-decoration: none;
+  text-align: left;
+}
+
+.blog-template-page a.back-link:hover {
+  color: #ccc;
+  /* text-decoration: underline; */ /* Opciono podvlačenje */
+}
+
+.post-content-main-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 } 
+
+.post-content-main_image_img{
+  max-width: 80%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.post-content-main_bold{
+  font-weight: 600;
+}
+
+.post-content-main_image_img_2{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  max-width: 30%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+}
+
+.post-content-main_image_img_3{
+  padding-top: 10px;
+ 
+  max-width: 50%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+}
+
+.post-content-main_image_img_4{
+  padding-top: 10px;
+  max-width: 50%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+} 
+
+.post-content-main_image_img_5{
+  padding-top: 10px;
+  max-width: 30%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+}
+
+.post-content-main_image_img_6{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  max-width: 50%;
+  height: auto;
+  display: block; /* Dodato radi sigurnosti */
+}
+
+.description-of-image{
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: #ddd;
+  text-align: center;
+}
+
+.post-read-time-text{
+  color: #00adb5;
+}
+
+.post-date-text{
+  color: #00adb5;
+}
+/* ===================================================================== */ 

@@ -40,6 +40,12 @@ function AppContent() {
   const [particleOpacity, setParticleOpacity] = useState(isLandingPage ? 0 : 1);
   const showBackgroundImage = true;
 
+  // ===== Novi Efekat za Scroll-to-Top =====
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); // Pokreni efekat svaki put kada se putanja promeni
+  // =======================================
+
   // Efekat za praćenje skrola i ažuriranje opacity-a
   useEffect(() => {
     // Definišemo handleScroll funkciju uvek, van if bloka
@@ -101,7 +107,7 @@ function AppContent() {
       <ParticleBackground style={{ opacity: particleOpacity }} />
 
       <Navbar />
-      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh', maxHeight: '100vh', height: '100%' }}>
         <main style={{ paddingTop: '70px', flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />

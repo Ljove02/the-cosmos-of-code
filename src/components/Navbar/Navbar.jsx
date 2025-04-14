@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useTranslations'; // Hook za jezik
-import { ShinyButton } from '../ShinyButton'; // Import ShinyButton
+import { ShinyButton } from '../ShinyButton'; // Vraćamo import ShinyButton
 // Importujemo slike zastava
 import serbiaFlag from '../../assets/serbia.png';
 import usFlag from '../../assets/united-states.png';
@@ -21,6 +21,7 @@ function Navbar() {
   };
 
   const closeMobileMenu = () => {
+    console.log("closeMobileMenu called");
     setIsMobileMenuOpen(false);
   };
 
@@ -78,8 +79,11 @@ function Navbar() {
 
           {/* Desna strana (Desktop) / Samo Jezički Switcher (Mobile) */}
           <div className="navbar-right">
+            {/* Vraćamo ShinyButton */}
             <Link to="/contact">
-              <ShinyButton className="contact-shiny-button">Contact Me</ShinyButton>
+              <ShinyButton className="contact-shiny-button">
+                Contact Me
+              </ShinyButton>
             </Link>
             {/* Koristimo dugme sa slikom zastave */} 
             <button
@@ -110,17 +114,18 @@ function Navbar() {
         {isMobileMenuOpen && <div className="mobile-nav-overlay" onClick={closeMobileMenu}></div>}
         <div className="mobile-nav-content">
            <button className="close-menu-icon" onClick={closeMobileMenu} aria-label="Close menu">&times;</button>
-          <Link to="/" className="mobile-nav-link logo-link">
+          <Link to="/" className="mobile-nav-link logo-link" onClick={closeMobileMenu}>
              Veljko Spasić
            </Link>
-           <Link to="/contact" className="mobile-nav-link contact-link">
+           <Link to="/contact" className="mobile-nav-link contact-link" onClick={closeMobileMenu}>
+              {/* Vraćamo ShinyButton i u mobilnom meniju */}
               <ShinyButton className="contact-shiny-button-mobile">
                  Contact
               </ShinyButton>
            </Link>
-           <NavLink to="/" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'} end>Home</NavLink>
-           <NavLink to="/blog" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'}>Blog</NavLink>
-           <NavLink to="/projects" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'}>Projects</NavLink>
+           <NavLink to="/" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={closeMobileMenu} end>Home</NavLink>
+           <NavLink to="/blog" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={closeMobileMenu}>Blog</NavLink>
+           <NavLink to="/projects" className={({ isActive }) => isActive ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={closeMobileMenu}>Projects</NavLink>
         </div>
       </div>
     </>

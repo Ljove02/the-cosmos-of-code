@@ -53,10 +53,9 @@
   gap: 20px;
 }
 
-/* Stil za Contact Me dugme na hover */
+/* Stil za Contact Me dugme na hover - VRAĆEN SELEKTOR */
 .navbar-right .contact-shiny-button:hover {
   /* Koristi URL do PNG fajla. Dodaj X i Y koordinate za hotspot. */
-  /* Primer: Postavljanje hotspota na 16px, 16px (centar za 32x32 sliku) */
   cursor: url('/src/assets/cursors/Rocket.png') 16 16, auto;
 }
 
@@ -115,7 +114,8 @@
 /* Mobilni elementi inicijalno sakriveni */
 .mobile-menu-icon {
   /* font-size: 1.8rem; */ /* Možda smanjiti malo? npr. 1.5rem */
-  font-size: 1.5rem;
+  padding: 0;
+  font-size: 2rem;
   display: none;
   background: none;
   border: none;
@@ -180,9 +180,17 @@
   font-family: var(--font-header);
 }
 
+/* Vraćamo i prilagođavamo stilove za dugme u mobilnom meniju */
+.mobile-nav-content .contact-shiny-button-mobile {
+  /* Ne mora nužno 100% širine, može i auto */
+  /* width: 100%; */
+  padding: 0.8rem 1.5rem; /* Malo veći vertikalni padding od podrazumevanog (0.5rem) */
+  font-size: 1.05rem; /* Malo veći font od podrazumevanog (1rem / --fs-base) */
+}
+
 .close-menu-icon {
     position: absolute;
-    top: 15px;
+    top: 5px;
     right: 20px;
     background: none;
     border: none;

@@ -47,7 +47,7 @@ export const ShinyButton = React.forwardRef((props, ref) => {
       ref={ref}
       className={cn(
         "relative rounded-lg px-6 py-2 font-medium", // Osnovni stilovi
-        "backdrop-blur-xl transition-shadow duration-300 ease-in-out hover:shadow", // Zadržavamo blur i hover senku
+        "transition-shadow duration-300 ease-in-out hover:shadow", // Zadržavamo samo shadow i transition
         "dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]", // Zadržavamo hover senku za dark mode
         className,
       )}

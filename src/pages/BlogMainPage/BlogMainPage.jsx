@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage, useTranslations } from '../../hooks/useTranslations';
-import { allPosts } from '../../data/mockPosts'; // Import podataka
+import { allPosts } from '../../data/mockPosts.js'; // Import podataka
 import './BlogMainPage.css';
 
 // Privremeni podaci - Idealno bi dolazili iz API-ja ili CMS-a
@@ -52,7 +52,7 @@ function BlogMainPage() {
             </article>
           ))
         ) : (
-          <p className="no-posts-message">No posts to display in this category.</p>
+          <p className="no-posts-message">{t.blog['no-posts-message']}</p>
         )}
       </div>
     </div>

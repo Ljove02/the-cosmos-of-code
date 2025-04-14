@@ -4,7 +4,9 @@
     "filterCaseStudies": "Case Studies",
     "filterBlogs": "Blogs",
     "readMore": "Read More",
-    "all": "All"
+    "all": "All",
+    "no-posts-message": "No posts to display in this category.",
+    "readingTime": "Reading Time: "
   },
   "projects": {
     "title": "Projects",

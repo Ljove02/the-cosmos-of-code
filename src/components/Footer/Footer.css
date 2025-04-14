@@ -1,6 +1,6 @@
 .footer-container {
   width: 100%;
-  padding: 2rem 1rem 0;  /* Vertikalni i horizontalni padding (koristimo rem) */
+  padding: 2rem 1rem 1rem;  /* Vertikalni i horizontalni padding (koristimo rem) */
   background-color: transparent; /* Eksplicitno transparentna pozadina */
   text-align: center; /* Centriramo tekst */
   margin-top: auto; /* Gura footer na dno ako je sadržaj kraći od visine ekrana */
