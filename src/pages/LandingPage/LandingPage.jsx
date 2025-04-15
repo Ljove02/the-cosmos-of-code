@@ -4,6 +4,9 @@ import { useLanguage } from '../../hooks/useTranslations';
 import DecryptedText from '../../components/DecryptedText';
 import TypingAnimation from '../../components/TypingAnimation';
 import ScrollIndicator from '../../components/ScrollIndicator';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -64,6 +67,38 @@ function LandingPage() {
             </ul>
           </div>
         </div>
+
+        {/* === Social Links Section === */}
+        <div className="social-links">
+          <span className="social-links-span">Links: </span>
+          <a 
+            href="https://www.linkedin.com/in/veljko-spasic-831b4828b/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+            aria-label="LinkedIn Profile"
+          >
+             {<FontAwesomeIcon icon={faLinkedin} />}
+          </a>
+          <a 
+            href="https://github.com/Ljove02" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="social-link"
+            aria-label="GitHub Profile"
+          >
+              {<FontAwesomeIcon icon={faGithub} />}
+          </a>
+          <a 
+            href="mailto:veljkoposlovni02@gmail.com" 
+            className="social-link"
+            aria-label="Send Email"
+          >
+             {<FontAwesomeIcon icon={faEnvelope} />}
+          </a>
+        </div>
+        {/* === End Social Links Section === */}
+
       </section>
 
       <ScrollIndicator />

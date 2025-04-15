@@ -161,6 +161,41 @@
   }
 }
 
+/* === Stilizacija za Social Links === */
+.social-links {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem; /* Razmak od about-content */
+  text-align: left; /* Poravnanje ulevo */
+  font-family: var(--font-body); /* Koristimo font za telo */
+  font-size: var(--fs-base); /* Osnovna veličina fonta */
+}
+
+
+
+.social-link {
+  color: #ffffff; /* Promenjeno u belu boju */
+  text-decoration: none; /* Uklanjamo podvlačenje */
+  margin: 0 8px; /* Razmak između ikonica */
+  font-size: 1.5rem; /* Veličina ikonica (prilagodi ako koristiš prave ikonice) */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00adb5; /* Boja na hover */
+  text-decoration: none; /* Bez podvlačenja na hover */
+}
+
+.social-links-span {
+  margin-right: 10px;
+  color: #00adb5;
+  font-weight: 600;
+  font-size: var(--fs-base);
+  padding-bottom: 3px;
+}
+
+/* === Kraj stilizacije za Social Links === */
+
 /* Language Switcher */
 .language-switcher {
   position: fixed;
@@ -217,11 +252,12 @@ p {
   max-width: 97ch; /* Ograničavanje širine paragrafa za bolju čitljivost */
 }
 
-a {
+.landing-page a {
   font-weight: 500;
-  color: #8ab4f8; /* Malo čitljivija plava */
+  color: inherit; /* Malo čitljivija plava */
   text-decoration: none; /* Uklanjamo podrazumevano podvlačenje */
 }
+
 a:hover {
   color: #00adb5;
   text-decoration: underline; /* Vraćamo podvlačenje na hover */

@@ -1,0 +1,91 @@
+.contact-page {
+  display: flex;
+  justify-content: space-between; /* Postavlja sadržaj levo, prazan prostor desno */
+  align-items: flex-start; /* Poravnava elemente na vrh */
+  padding: 40px 20px; /* Slično kao ProjectPage */
+  max-width: 1200px; /* Ograničava ukupnu širinu */
+  margin: 40px auto; /* Centriranje kontejnera */
+  min-height: 70vh; /* Minimalna visina */
+}
+
+.contact-content { /* Zauzima 60% širine, ostavlja 40% za desno */
+  max-width: 100%; /* Opciono: Maksimalna širina teksta za čitljivost */
+  padding-right: 40px; /* Razmak između teksta i desnog praznog prostora */
+  text-align: left;
+}
+
+.contact-right-space {
+  flex-basis: 40%; /* Zauzima preostalih 40% */
+  /* Ovde možeš dodati stilove za 3D objekat ako je potrebno */
+  min-height: 300px; /* Primer minimalne visine */
+}
+
+/* Koristimo postojeću klasu za glavni naslov */
+.contact-page .page-title {
+  font-family: var(--font-header); /* Pretpostavka: Koristimo isti font kao ProjectPage title */
+  font-size: var(--fs-xl);
+  margin-bottom: 40px; /* Razmak */
+  text-align: left; /* Već jeste, ali da potvrdimo */
+  font-weight: 600;
+  color: #00adb5;
+}
+
+/* Stil za H2 podnaslov */
+.contact-page .contact-subheading {
+  font-family: var(--font-headerH); /* Pretpostavka: Koristimo isti font kao section-heading */
+  font-size: var(--fs-xl);
+  color: #00adb5; /* Akcentna boja */
+  margin-top: 2.5rem; /* Veći razmak iznad */
+  margin-bottom: 1rem; /* Razmak ispod */
+  font-weight: 600;
+}
+
+.contact-page p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.7; /* Malo veći prored za čitljivost */
+  margin-bottom: 1.5rem; /* Razmak između paragrafa */
+  color: var(--text-secondary); /* Sekundarna boja teksta */
+}
+
+.contact-page em {
+  font-style: italic;
+  color: var(--text-primary); /* Isticanje email adrese */
+}
+
+.contact-page a {
+  color: #8ab4f8; /* Boja linka */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-page a:hover {
+  color: #00adb5; /* Boja linka na hover */
+  text-decoration: underline;
+}
+
+/* Responzivnost: Na manjim ekranima, sadržaj zauzima celu širinu */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column; /* Menjamo u kolonu */
+    align-items: center; /* Centriramo */
+    padding: 20px;
+  }
+
+  .contact-content {
+    flex-basis: auto; /* Uklanjamo fiksnu širinu */
+    width: 100%; /* Zauzima celu širinu */
+    padding-right: 0; /* Uklanjamo desni padding */
+    max-width: 100%; /* Uklanjamo max-width */
+  }
+
+  .contact-right-space {
+    display: none; /* Sakrivamo desni prostor */
+  }
+
+  .contact-page .page-title,
+  .contact-page .contact-subheading {
+    text-align: center; /* Centriramo naslove */
+  }
+} 

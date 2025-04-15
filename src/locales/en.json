@@ -22,12 +22,12 @@
     "blogLink": "Blog",
     "projectsLink": "Projects",
     "aboutMeTitle": "Hi There!",
-    "aboutMePlaceholder1": "I'm Veljko Spasic, a fourth-year Software Engineering student at Singidunum University. I'm deeply passionate about crafting innovative solutions, constantly diving into the captivating world of AI, and turning creative ideas into reality. I thrive on the excitement and magic of building projects from scratch, and my curiosity often leads me into fascinating new technologies and startup ideas.",
-    "aboutMePlaceholder2": "One of my recent adventures involved exploring advanced AI techniques, from natural language processing to computer vision, aiming to create smarter, more intuitive systems that genuinely enhance human experiences.",
+    "aboutMePlaceholder1": "I'm Veljko Spasic, a Software Engineering student who loves turning curiosity into reality. I'm passionate about all things tech—whether it's AI, robotics, rocket science, and exploring how these fields can creatively intersect and inspire meaningful projects. To me, projects are more about the journey than the destination—each new idea brings excitement and endless possibilities.",
+    "aboutMePlaceholder2": "I thrive on challenges, deeply believing in the value of learning from mistakes and the power of genuine connections. My ambition drives me to constantly explore new technologies, create meaningful solutions, and brainstorm innovative startup ideas.",
     "currentlyTitle": "Currently, I am:",
-    "currentlyItem1": "Playing with gravity and something that (maybe) shouldn't land.",
-    "currentlyItem2": "Exploring exciting startup ideas and opportunities that challenge and inspire me.",
-    "currentlyItem3": "Building personal projects that blend creativity, technology, and my love for the process itself."
+    "currentlyItem1": "Navigating the exciting world of entrepreneurship with friends.",
+    "currentlyItem2": "Experimenting with advanced AI techniques for rocket landings.",
+    "currentlyItem3": "Exploring creative ways to combine AI and robotics in innovative projects. (multimodal!)"
   },
   "introduction": {
     "mainGreeting": "Hello I'm,",
@@ -35,5 +35,15 @@
     "type2": "transforming ideas into AI-powered projects",
     "type3": "building startups behind the scenes",
     "type4": "making rockets smarter, landing optional"
+  },
+  "contact": {
+    "title": "Contact",
+    "greeting": "Hey! 👋",
+    "intro": "If you ever feel like chatting about ideas, projects, or just want to say hi — feel free to reach out.",
+    "emailPrompt": "Email me at <em>veljkoposlovni02@gmail.com</em> (bonus points if your subject line makes me laugh 😄).",
+    "linkedinPrompt": "I'm pretty active on <a href=\"https://www.linkedin.com/in/veljko-spasic-831b4828b/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a> too, so feel free to connect or drop a message.",
+    "githubPrompt": "Want to explore some of my chaotic code or personal experiments? <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub's the spot</a>.",
+    "callHeading": "Schedule a call?",
+    "callPrompt": "Not really into putting my number out here, but just reach out and we'll find a time — chill and simple."
   }
 }

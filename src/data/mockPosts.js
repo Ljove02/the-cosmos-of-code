@@ -16,7 +16,7 @@ export const allPosts = [
         Prvog dana smo jedva razumeli šta znači imati start-up. A poslednjeg, već smo stajali pred pravim investitorima, prezentujući našu ideju o VR uređaju za detekciju ambliopije. A ja sam bio deo tima koji je sve to postigao.
         </p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img" src="../src/assets/blog_1/ntp-parkup-1.avif" alt="NTP ParkUp! 1" />
+          <img class="post-content-main_image_img" src="../../public/assets/blog_1/ntp-parkup-1.avif" alt="NTP ParkUp! 1" />
         </div>
         <p>
         Svake godine, Naučno-tehnološki park u Srbiji organizuje kamp pod nazivom “NTP ParkUp!” za studente zainteresovane za svet startupa.
@@ -33,7 +33,7 @@ export const allPosts = [
         <h2>1) Svi Mogu Naučiti Kako da Pokrenu Start-up!</h2>
         <p class="post-content-main_bold">Da, baš svako.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_2" src="../src/assets/blog_1/ntp-parkup-2.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_2" src="../../public/assets/blog_1/ntp-parkup-2.avif" alt="NTP ParkUp! 2" />
         </div>
         <p>
         Uvek sam želeo da imam svoj start-up, ali nisam imao jasnu predstavu o tome kako da započnem i šta je sve potrebno za uspešan start-up. 
@@ -127,7 +127,7 @@ export const allPosts = [
       en: `
         <p class="post-content-main_bold">On the first day, we barely understood what it meant to have a start-up. But by the last day, we were standing in front of real investors, pitching our idea for a VR device to detect amblyopia. And I was part of the team that made it all happen.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img" src="../src/assets/blog_1/ntp-parkup-1.avif" alt="NTP ParkUp! 1" />
+          <img class="post-content-main_image_img" src="../../public/assets/blog_1/ntp-parkup-1.avif" alt="NTP ParkUp! 1" />
         </div>
         <p>Each year, the Science and Technology Park in Serbia organises a camp called “NTP ParkUp!” for students interested in the world of startups. The program aims to equip young entrepreneurs with the knowledge and skills needed to launch their own startups through intensive training and mentorship.</p>
         <p>This year, I had the opportunity to participate in the camp, where I worked with a team on developing an innovative VR device for detecting amblyopia. Throughout the camp, we went through all the stages of building a startup, from ideation to pitching to real investors.</p>
@@ -135,7 +135,7 @@ export const allPosts = [
         <h2>1) Everyone Can Learn How to Start a Startup!</h2>
         <p class="post-content-main_bold">Yes, everyone.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_2" src="../src/assets/blog_1/ntp-parkup-2.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_2" src="../../public/assets/blog_1/ntp-parkup-2.avif" alt="NTP ParkUp! 2" />
         </div>
         <p>I’ve always wanted to have my own startup, but I never had a clear idea of how to begin or what was needed for a successful startup. At the camp, through practical examples and mentoring sessions, I finally clarified many misconceptions I had.</p>
         <p>I learned that, although startups can seem daunting, it all boils down to a systematic approach. Working on our project, I realised how important it is to lay a strong foundation: from identifying the right idea, thoroughly researching the market, to clearly defining the problem our product solves.</p>
@@ -144,13 +144,13 @@ export const allPosts = [
         <h2>2) Teamwork, Ideas, and Skills: The Foundations of a Successful Startup</h2>
         <p>One of the most significant aspects of this camp was working in a team. Through intense team activities, I learned how vital communication within the team is and how everyone needs to be aligned when it comes to the goal we want to achieve.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_3" src="../src/assets/blog_1/ntp-parkup-3.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_3" src="../../public/assets/blog_1/ntp-parkup-3.avif" alt="NTP ParkUp! 2" />
         </div>
         <p class="description-of-image">Working Together with Our Mentor</p>
         <p>I learned how to identify the right idea, define the problem, and analyse the market, but also how to communicate effectively within the team. Through daily work on our project, all these skills were tested in practice, allowing me to gain invaluable experience.</p>
         <p>A particularly interesting experience was on the third day when we practiced presentation skills through role-play, which helped us overcome stage fright and prepare for the final pitch to investors.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_4" src="../src/assets/blog_1/ntp-parkup-4.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_4" src="../../public/assets/blog_1/ntp-parkup-4.avif" alt="NTP ParkUp! 2" />
         </div>
         <p class="description-of-image">RolePlay Activity</p>
         <p>This exercise gave us the opportunity to overcome the fear of public speaking in a fun and interactive way, making us even better prepared for the real challenges that awaited us.</p>
@@ -159,14 +159,14 @@ export const allPosts = [
         <p>During the final pitch, one of the investors expressed concern about potential side effects of using VR devices, commonly seen in the gaming industry. I realised his perspective was based on statistics from gaming, where VR devices are used for longer periods than recommended.</p>
         <p>Due to this excessive use, the statistics on side effects are skewed, creating a misleading picture of VR technology. I explained that our device, intended for medical use, wouldn’t be used in the same way but rather in controlled, short intervals, minimising the risk of side effects.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_5" src="../src/assets/blog_1/ntp-parkup-5.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_5" src="../../public/assets/blog_1/ntp-parkup-5.avif" alt="NTP ParkUp! 2" />
         </div>
         <p class="description-of-image">Me Pitching to Investors :)</p>
         <p>It was incredibly satisfying when we secured third place, and I’m especially proud of my team and how we tackled the challenges together.</p>
         <h2>4) Lessons in Team Values</h2>
         <p>One of the most important moments at the camp happened at the end of a lecture when we were given a task to work in teams on maintaining engagement and defining team values. While we were all excited about the fun parts of the task, like running around the building searching for items, most of us didn’t pay much attention to the part about team values.</p>
         <div class="post-content-main-image">
-          <img class="post-content-main_image_img_6" src="../src/assets/blog_1/ntp-parkup-6.avif" alt="NTP ParkUp! 2" />
+          <img class="post-content-main_image_img_6" src="../../public/assets/blog_1/ntp-parkup-6.avif" alt="NTP ParkUp! 2" />
         </div>
         <p>When it came time to present, all the teams showed their results. To our surprise, the winning team hadn’t collected all the items from the list, but they excelled in explaining the values they shared and why those values mattered.</p>
         <p>The mentor then revealed that this part of the task carried the most weight in the evaluation, even more than all the other parts combined. It was a significant revelation for all of us—a lesson that the values and unity of the team are far more important than any individual activity.</p>

@@ -32,7 +32,7 @@
 /* A link za naslov bloga */
 .blog-main-page a.blog-item-link {
   font-weight: 500;
-  color: inherit;
+  color: #dddddd;
   text-decoration: none;
   transition: color 0.2s ease-out;
   /* font-size treba da bude definisan na .blog-item-title unutar linka */

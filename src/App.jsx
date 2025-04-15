@@ -10,6 +10,7 @@ import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import backgroundImage from './assets/gbg.jpg';
+import ContactPage from './pages/ContactPage';
 
 // Placeholder importi za stranice - kreiraćemo ih kasnije
 // import LandingPage from './pages/LandingPage';
@@ -107,14 +108,14 @@ function AppContent() {
       <ParticleBackground style={{ opacity: particleOpacity }} />
 
       <Navbar />
-      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100vh', maxHeight: '100vh', height: '100%' }}>
+      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '96.83vh' }}>
         <main style={{ paddingTop: '70px', flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/blog" element={<BlogMainPage />} />
             <Route path="/blog/:slug" element={<BlogTemplatePage />} />
             <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/contact" element={<div>Contact Page Placeholder</div>} />
+            <Route path="/contact" element={<ContactPage />} />
             {/* <Route path="*" element={<NotFoundPage />} /> */}
           </Routes>
         </main>

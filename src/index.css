@@ -37,7 +37,7 @@
   line-height: 1.6; /* Malo povećan line-height za bolju čitljivost */
   font-weight: 400;
   color-scheme: dark; /* Postavljamo podrazumevanu šemu na tamnu */
-  color: rgba(255, 255, 255, 0.87);
+  color: #ddd;
   background-color: hsl(var(--background)); /* Koristimo HSL varijablu */
 
   font-synthesis: none;

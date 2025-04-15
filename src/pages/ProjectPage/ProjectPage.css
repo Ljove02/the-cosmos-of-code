@@ -12,10 +12,12 @@
 }
 
 .projects-grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   /* Automatski broj kolona zavisno od širine ekrana */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px; /* Razmak između kartica */
+  align-items: center;
 }
 
 /* Responzivnost za ProjectPage */

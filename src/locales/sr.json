@@ -4,9 +4,9 @@
     "filterCaseStudies": "Studije Slučaja",
     "filterBlogs": "Blogovi",
     "readMore": "Pročitaj Više",
-    "all": "Svi",
+    "all": "Sve",
     "no-posts-message": "Nema postova za prikaz u ovoj kategoriji.",
-    "readingTime": "Vreme Čitanja: "
+    "readingTime": "Vreme čitanja: "
   },
   "projects": {
     "title": "Projekti",
@@ -18,22 +18,32 @@
   },
   "landing": {
     "welcome": "Dobrodošli",
-    "aboutMe": "Zdravo!",
+    "aboutMe": "Ćao!",
     "blogLink": "Blog",
     "projectsLink": "Projekti",
     "aboutMeTitle": "Ćao!",
-    "aboutMePlaceholder1": "Ja sam Veljko Spasić, student četvrte godine Softverskog inženjerstva na Univerzitetu Singidunum. Imam snažnu strast prema stvaranju inovativnih rešenja, stalno istražujem svet veštačke inteligencije i uživam u tome da pretvaram kreativne ideje u funkcionalne projekte. Volim magiju stvaranja iz nule – taj osećaj dok gradim nešto novo je za mene nezamenjiv :)",
-    "aboutMePlaceholder2": "Jedan od mojih nedavnih poduhvata uključuje istraživanje naprednih AI tehnika, od obrade prirodnog jezika do računarskog vida, s ciljem da se razviju pametniji i intuitivniji sistemi koji poboljšavaju svakodnevno korisničko iskustvo.",
-    "currentlyTitle": "Trenutno radim na:",
-    "currentlyItem1": "Igram se gravitacijom i nečim što (ne) bi trebalo da sleti.",
-    "currentlyItem2": "Razvijanju ideja za startape koji me izazivaju i inspirišu.",
-    "currentlyItem3": "Izradi ličnih projekata koji spajaju kreativnost, tehnologiju i ljubav prema samom procesu."
+    "aboutMePlaceholder1": "Ja sam Veljko Spasić, student Softverskog Inženjerstva koji voli da pretvara znatiželju u stvarnost. Strastven sam prema tehnologiji—bilo da je to AI, robotika, raketna nauka, i istraživanje kako se ova polja mogu kreativno ukrštati i inspirisati smislene projekte. Za mene, projekti su više putovanje nego destinacija—svaka nova ideja donosi uzbuđenje i beskrajne mogućnosti.",
+    "aboutMePlaceholder2": "Uživam u izazovima, duboko verujući u vrednost učenja iz grešaka i moć iskrenih veza. Moja ambicija me tera da konstantno istražujem nove tehnologije, kreiram smislena rešenja i razmišljam o inovativnim startup idejama.",
+    "currentlyTitle": "Trenutno:",
+    "currentlyItem1": "Plovim uzbudljivim svetom preduzetništva sa prijateljima.",
+    "currentlyItem2": "Eksperimentišem sa naprednim AI tehnikama za sletanje raketa.",
+    "currentlyItem3": "Istražujem kreativne načine kombinovanja AI i robotike u inovativnim projektima. (multimodalno!)"
   },
   "introduction": {
-    "mainGreeting": "Hello I'm,",
-    "type1": "Veljko Spasic",
-    "type2": "transforming ideas into AI-powered projects",
-    "type3": "building startups behind the scenes",
-    "type4": "making rockets smarter, landing optional"
+    "mainGreeting": "Zdravo, ja sam,",
+    "type1": "Veljko Spasić",
+    "type2": "pretvaram ideje u projekte sa AI-om",
+    "type3": "gradim startape iza kulisa",
+    "type4": "činim rakete pametnijim, sletanje opciono"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "greeting": "Ćao! 👋",
+    "intro": "Ako ti ikad padne na pamet da popričamo o idejama, projektima ili samo želiš da se javiš — slobodno piši.",
+    "emailPrompt": "Možeš mi poslati mejl na <em>veljkoposlovni02@gmail.com</em> (bonus poeni ako naslov poruke uspe da me nasmeje 😄).",
+    "linkedinPrompt": "Aktivan sam i na <a href=\"https://www.linkedin.com/in/veljko-spasic-831b4828b/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn-u</a>, slobodno se poveži ili pošalji poruku.",
+    "githubPrompt": "Ako želiš da baciš pogled na moj haotični kod ili neke moje eksperimente — <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub je pravo mesto</a>.",
+    "callHeading": "Zakaži poziv?",
+    "callPrompt": "Ne volim baš da kačim broj telefona javno, ali slobodno se javi mejlom ili preko LinkedIn-a i lako ćemo se dogovoriti. Opušteno i jednostavno."
   }
 }

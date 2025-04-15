@@ -3,7 +3,7 @@ import DecryptedText from '../DecryptedText';
 import './ScrollIndicator.css';
 
 // Podesivo vreme inicijalnog kašnjenja u ms
-const INITIAL_DELAY_MS = 1000;
+const INITIAL_DELAY_MS = 0;
 const SCROLL_THRESHOLD = 0.10; // Prag skrola (10% visine prozora)
 
 function ScrollIndicator() {
