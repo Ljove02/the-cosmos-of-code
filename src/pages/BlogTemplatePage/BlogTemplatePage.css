@@ -250,12 +250,23 @@
   width: 100%;
 } 
 
+.post-content-main_image_img,
+.post-content-main_image_img_2,
+.post-content-main_image_img_3,
+.post-content-main_image_img_4,
+.post-content-main_image_img_5,
+.post-content-main_image_img_6 {
+  border-radius: 0.5rem; /* Dodajemo border-radius */
+  overflow: hidden; /* Dodajemo overflow hidden */
+  padding: 0px !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .post-content-main_image_img{
   max-width: 80%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
 
 .post-content-main_bold{
@@ -263,38 +274,30 @@
 }
 
 .post-content-main_image_img_2{
-  padding-top: 10px;
-  padding-bottom: 20px;
   max-width: 30%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */
 }
 
 .post-content-main_image_img_3{
-  padding-top: 10px;
- 
   max-width: 50%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */
 }
 
 .post-content-main_image_img_4{
-  padding-top: 10px;
   max-width: 50%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */
 } 
 
 .post-content-main_image_img_5{
-  padding-top: 10px;
   max-width: 30%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */
 }
 
 .post-content-main_image_img_6{
-  padding-top: 10px;
-  padding-bottom: 20px;
   max-width: 50%;
   height: auto;
   display: block; /* Dodato radi sigurnosti */

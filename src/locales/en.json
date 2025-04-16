@@ -34,12 +34,12 @@
     "type1": "Veljko Spasic",
     "type2": "transforming ideas into AI-powered projects",
     "type3": "building startups behind the scenes",
-    "type4": "making rockets smarter, landing optional"
+    "type4": "playing with thrust and theory"
   },
   "contact": {
     "title": "Contact",
     "greeting": "Hey! 👋",
-    "intro": "If you ever feel like chatting about ideas, projects, or just want to say hi — feel free to reach out.",
+    "intro": "If you ever feel like chatting about ideas, projects, feel free to reach out.",
     "emailPrompt": "Email me at <em>veljkoposlovni02@gmail.com</em> (bonus points if your subject line makes me laugh 😄).",
     "linkedinPrompt": "I'm pretty active on <a href=\"https://www.linkedin.com/in/veljko-spasic-831b4828b/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a> too, so feel free to connect or drop a message.",
     "githubPrompt": "Want to explore some of my chaotic code or personal experiments? <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub's the spot</a>.",

@@ -30,18 +30,18 @@
     "currentlyItem3": "Istražujem kreativne načine kombinovanja AI i robotike u inovativnim projektima. (multimodalno!)"
   },
   "introduction": {
-    "mainGreeting": "Zdravo, ja sam,",
+    "mainGreeting": "Zdravo ja sam,",
     "type1": "Veljko Spasić",
-    "type2": "pretvaram ideje u projekte sa AI-om",
-    "type3": "gradim startape iza kulisa",
-    "type4": "činim rakete pametnijim, sletanje opciono"
+    "type2": "pretvaram ideje u kul projekte sa AI-om",
+    "type3": "gradim startap iza scena",
+    "type4": "igram se sa potiskom i teorijom"
   },
   "contact": {
     "title": "Kontakt",
     "greeting": "Ćao! 👋",
-    "intro": "Ako ti ikad padne na pamet da popričamo o idejama, projektima ili samo želiš da se javiš — slobodno piši.",
+    "intro": "Ako ti ikad padne na pamet da popričamo o idejama, slobodno mi piši.",
     "emailPrompt": "Možeš mi poslati mejl na <em>veljkoposlovni02@gmail.com</em> (bonus poeni ako naslov poruke uspe da me nasmeje 😄).",
-    "linkedinPrompt": "Aktivan sam i na <a href=\"https://www.linkedin.com/in/veljko-spasic-831b4828b/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn-u</a>, slobodno se poveži ili pošalji poruku.",
+    "linkedinPrompt": "Aktivan sam i na <a href=\"https://www.linkedin.com/in/veljko-spasic-831b4828b/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn-u</a>, slobodno me dodaj ili pošalji poruku.",
     "githubPrompt": "Ako želiš da baciš pogled na moj haotični kod ili neke moje eksperimente — <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub je pravo mesto</a>.",
     "callHeading": "Zakaži poziv?",
     "callPrompt": "Ne volim baš da kačim broj telefona javno, ali slobodno se javi mejlom ili preko LinkedIn-a i lako ćemo se dogovoriti. Opušteno i jednostavno."

@@ -9,7 +9,7 @@ import BlogTemplatePage from './pages/BlogTemplatePage';
 import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import backgroundImage from './assets/gbg.jpg';
+import backgroundImage from './assets/gbg.webp';
 import ContactPage from './pages/ContactPage';
 
 // Placeholder importi za stranice - kreiraćemo ih kasnije
@@ -108,7 +108,7 @@ function AppContent() {
       <ParticleBackground style={{ opacity: particleOpacity }} />
 
       <Navbar />
-      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '96.83vh' }}>
+      <div className="content-wrapper" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '96.5vh', width: '100%' }}>
         <main style={{ paddingTop: '70px', flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />

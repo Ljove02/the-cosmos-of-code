@@ -114,9 +114,6 @@ function Navbar() {
         {isMobileMenuOpen && <div className="mobile-nav-overlay" onClick={closeMobileMenu}></div>}
         <div className="mobile-nav-content">
            <button className="close-menu-icon" onClick={closeMobileMenu} aria-label="Close menu">&times;</button>
-          <Link to="/" className="mobile-nav-link logo-link" onClick={closeMobileMenu}>
-             Veljko Spasić
-           </Link>
            <Link to="/contact" className="mobile-nav-link contact-link" onClick={closeMobileMenu}>
               {/* Vraćamo ShinyButton i u mobilnom meniju */}
               <ShinyButton className="contact-shiny-button-mobile">

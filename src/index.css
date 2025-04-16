@@ -15,7 +15,7 @@
 /* Definišemo HSL varijable ako već ne postoje globalno */
 :root {
   /* Osnovne boje i border */
-  --background: 240 10% 3.9%;
+  --background: #07070a;
   --border: 240 3.7% 15.9%;
   --primary-hsl: 210 40% 98%;
 

@@ -176,14 +176,13 @@
   padding: 60px 20px 20px 20px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 35px;
   font-family: var(--font-header);
+  margin-top: 40px;
 }
 
 /* Vraćamo i prilagođavamo stilove za dugme u mobilnom meniju */
 .mobile-nav-content .contact-shiny-button-mobile {
-  /* Ne mora nužno 100% širine, može i auto */
-  /* width: 100%; */
   padding: 0.8rem 1.5rem; /* Malo veći vertikalni padding od podrazumevanog (0.5rem) */
   font-size: 1.05rem; /* Malo veći font od podrazumevanog (1rem / --fs-base) */
 }

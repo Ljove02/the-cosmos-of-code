@@ -1,33 +1,59 @@
-.project-page {
-  max-width: 1200px; /* Širi kontejner za projekte */
-  margin: 40px auto;
-  padding: 20px;
+.project-page { /* Širi kontejner za projekte */
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
 }
 
 .page-title {
   text-align: center;
   margin-bottom: 40px; /* Veći razmak ispod naslova */
-  font-size: 2.5rem;
+  font-size: var(--fs-xl);
   font-family: var(--font-header);
+  text-align: left;
+  font-weight: bold;
 }
 
 .projects-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid; /* Menjamo nazad u grid */
   /* Automatski broj kolona zavisno od širine ekrana */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px; /* Razmak između kartica */
-  align-items: center;
+  margin-top: 2rem;
 }
+
+/* === Placeholder Styles === */
+.project-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh; /* Visina da zauzme dobar deo ekrana */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.placeholder-image {
+  width: 200px; /* Prilagodi veličinu po potrebi */
+  max-width: 80%; 
+  height: auto;
+  margin-bottom: 2rem; /* Razmak ispod slike */
+  border-radius: 50%; /* Opciono: Ako želiš kružnu sliku */
+}
+
+.placeholder-text {
+  color: #00adb5 !important;
+  font-family: var(--font-body); /* Koristimo font za telo */
+  font-size: var(--fs-lg); /* Malo veći font */
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* === End Placeholder Styles === */
 
 /* Responzivnost za ProjectPage */
 @media (max-width: 768px) {
-  .project-page {
-    padding: 15px;
-  }
+  
   .page-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: var(--fs-lg);
   }
   .projects-grid {
     /* Smanjujemo minimalnu širinu kartice na manjim ekranima */

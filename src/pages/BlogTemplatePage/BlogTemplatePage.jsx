@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useLanguage, useTranslations } from '../../hooks/useTranslations';
-import { allPosts } from '../../data/mockPosts'; // Import podataka
+import { allPosts } from '../../data/Posts'; // Import podataka
 import './BlogTemplatePage.css';
 
 function BlogTemplatePage() {

@@ -1,41 +1,68 @@
 import React from 'react';
-import { useTranslations } from '../../hooks/useTranslations';
+
 import './ProjectCard.css';
 
-function ProjectCard({ title, description, imageUrl, projectUrl, tags = [] }) {
-  const t = useTranslations();
-
-  // Podrazumevana slika ako imageUrl nije prosleđen
-  const displayImage = imageUrl || 'https://via.placeholder.com/400x250?text=Project+Image';
-
+const ProjectCard = ({ 
+  title, 
+  description, 
+  tags, 
+  image = '/placeholder.svg',
+  githubUrl, 
+  demoUrl 
+}) => {
   return (
-    <article className="project-card" aria-labelledby={`project-title-${title.replace(/\s+/g, '-')}`}>
-      <div className="card-image-container">
-        <img src={displayImage} alt={`${title} screenshot`} className="card-image" loading="lazy" />
+    <div className="project-card">
+      <div className="project-card-image-wrapper">
+        <img 
+          src={image} 
+          alt={title} 
+          className="project-card-image" 
+        />
       </div>
-      <div className="card-content">
-        <h3 id={`project-title-${title.replace(/\s+/g, '-')}`} className="card-title">{title}</h3>
-        {tags.length > 0 && (
-          <div className="card-tags">
-            {tags.map(tag => (
-              <span key={tag} className="tag">{tag}</span>
-            ))}
-          </div>
-        )}
-        <p className="card-description">{description}</p>
-        {projectUrl && (
-          <a
-            href={projectUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-link"
-          >
-            {t.projects.viewProject}
-          </a>
-        )}
+      
+      <div className="project-card-content">
+        <h3 className="project-card-title">{title}</h3>
+        <p className="project-card-description">{description}</p>
+        
+        <div className="project-card-tags">
+          {tags.map((tag, index) => (
+            <span 
+              key={index} 
+              className="project-card-tag"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        <div className="project-card-links">
+          {githubUrl && (
+            <a 
+              href={githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="project-card-link"
+              aria-label="View GitHub repository"
+            >
+              
+            </a>
+          )}
+          
+          {demoUrl && (
+            <a 
+              href={demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="project-card-link"
+              aria-label="View live demo"
+            >
+              
+            </a>
+          )}
+        </div>
       </div>
-    </article>
+    </div>
   );
-}
+};
 
 export default ProjectCard; 
