@@ -45,5 +45,34 @@
     "githubPrompt": "Ako želiš da baciš pogled na moj haotični kod ili neke moje eksperimente — <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub je pravo mesto</a>.",
     "callHeading": "Zakaži poziv?",
     "callPrompt": "Ne volim baš da kačim broj telefona javno, ali slobodno se javi mejlom ili preko LinkedIn-a i lako ćemo se dogovoriti. Opušteno i jednostavno."
+  },
+  "audioNarrator": {
+    "listen": "Preslušaj članak",
+    "share": "Podeli",
+    "linkCopied": "Link kopiran!"
+  },
+  "seo - landing page": {
+    "title": "Veljko Spasić | Veštačka inteligencija, Data Science i Full Stack",
+    "description": "Ja sam Veljko Spasić, softverski inženjer koji voli da spaja AI, data science i razvoj u projekte koji imaju smisla. Volim tehnologiju, dobre ideje i jednostavna rešenja.",
+    "keywords": "Veljko Spasić, softverski inženjer, AI razvoj, data science inženjer, full stack programer, mašinsko učenje, lični portfolio, veštačka inteligencija, web aplikacije, programer Srbija",
+    "robots": "index, follow"
+  },
+  "seo - blog": {
+    "title": "Veljko Spasić | Blog",
+    "description": "Pišem o stvarima koje me zanimaju — od veštačke inteligencije i data science-a do razvoja sistema i ličnih projekata. Beležim ideje, eksperimente i razmišljanja o novoj tehnologiji",
+    "keywords": "Veljko Spasić, blog, veštačka inteligencija, data science, full stack razvoj, lični blog, softverski inženjer Srbija, buduće tehnologije",
+    "robots": "index, follow"
+  },
+  "seo - projects": {
+    "title": "Veljko Spasić | Projekti",
+    "description": "Pogledaj moje projekte — od eksperimentalnih do praktičnih — u oblastima AI-ja, data science-a i full stack development-a.",
+    "keywords": "Veljko Spasić, AI projekti, data science portfolio, full stack razvoj, softverski inženjer, tech projekti Srbija, inteligentni sistemi",
+    "robots": "index, follow"
+  },
+  "seo - contact": {
+    "title": "Veljko Spasić | Kontakt",
+    "description": "Piši mi slobodno. Otvoren sam za projekte, saradnje ili kratak razgovor.",
+    "keywords": "Veljko Spasić, kontakt, email, softverski inženjer, linkedin, github, Srbija",
+    "robots": "index, follow"
   }
 }

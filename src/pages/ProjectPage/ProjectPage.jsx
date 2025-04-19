@@ -10,6 +10,12 @@ function ProjectPage() {
   const t = useTranslations();
 
   return (
+    <>
+    <title>Veljko Spasic | Projects</title>
+    <meta name="description" content="Explore personal and collaborative projects where I build, test, and experiment with ideas in AI, data science, full stack development, and early-stage startup concepts."/>
+    <meta name="keywords" content="Veljko Spasic, AI projects, data science portfolio, full stack development, startup projects, collaborative tech work, personal software builds, software engineer Serbia"/>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.veljkospasic.com/projects" />
     <div className="project-page">
       <h1 className="page-title">{t.projects.title}</h1>
 
@@ -43,6 +49,7 @@ function ProjectPage() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

@@ -26,6 +26,12 @@ function BlogMainPage() {
   };
 
   return (
+    <>
+    <title>Veljko Spasic | Blog</title>
+    <meta name="description" content="I write about things that interest me — from artificial intelligence and data science to system design and personal projects. I document ideas, experiments, and thoughts on technology in motion."/>
+    <meta name="keywords" content="Veljko Spasic, tech blog, AI articles, data science writing, full stack development, personal projects, software engineering insights, machine learning blog, developer experiences, Serbia developer blog, startup"/>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.veljkospasic.com/blog" />
     <div className="blog-main-page">
       <h2 className="blog-list-title">{t.blog.title}</h2>
 
@@ -56,6 +62,7 @@ function BlogMainPage() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

@@ -12,17 +12,24 @@ import './LandingPage.css';
 function LandingPage() {
   const { translations: t } = useLanguage();
 
-  // Niz tekstova za TypingAnimation iz prevoda - ISPRAVNA SINTAKSA
+  
   const typingTexts = [
-    t.introduction.type1, // Ovo je string
-    t.introduction.type2, // Ovo je string
-    t.introduction.type3, // Ovo je string
-    t.introduction.type4  // Ovo je string
+    t.introduction.type1, 
+    t.introduction.type2, 
+    t.introduction.type3, 
+    t.introduction.type4  
   ];
 
   const subheadingText = "Software Engineer | Full Stack Developer | AI Enthusiast";
 
   return (
+    <>
+    <title>Veljko Spasic | AI, Data Science & Full Stack</title>
+    <meta name="description" content="I'm Veljko Spasic, a software engineer who enjoys combining AI, data science, and development into projects that make sense. I like technology, good ideas, and simple solutions."/>
+    <meta name="keywords" content="Veljko Spasic, software engineer, AI developer, data science engineer, full stack web developer, machine learning projects, personal tech blog, AI portfolio, Serbia developer, modern web applications"/>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.veljkospasic.com/" />
+      
     <div className="landing-page">
       <section className="intro-section" aria-labelledby="intro-heading">
         <div className="intro-heading-wrapper">
@@ -103,6 +110,7 @@ function LandingPage() {
 
       <ScrollIndicator />
     </div>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useLanguage, useTranslations } from '../../hooks/useTranslations';
 import { allPosts } from '../../data/Posts'; // Import podataka
+import AudioNarrator from '../../components/AudioNarrator'; // Import nove komponente
 import './BlogTemplatePage.css';
 
 function BlogTemplatePage() {
@@ -46,8 +47,17 @@ function BlogTemplatePage() {
   }
 
   const categoryText = postData.category === 'case-study' ? t.blog.filterCaseStudies : t.blog.filterBlogs;
+  // Provera da li postoje audio fajlovi za prikazivanje plejera
+  const hasAudio = postData.audioSr && postData.audioEn; 
+
 
   return (
+    <>
+    <title>{postData.title[language]}</title>
+    <meta name="description" content={postData.description} />
+    <meta name="keywords" content={postData.keywords} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={`https://www.veljkospasic.com/blog/${postData.slug}`} />
     <article className="blog-template-page">
       <header className="post-header">
         <h1 className="post-title-main">{postData.title[language]}</h1>
@@ -56,6 +66,15 @@ function BlogTemplatePage() {
           <span className="post-read-time">{t.blog.readingTime} <span className="post-read-time-text">{postData.readTime[language]}</span></span>
         </p>
       </header>
+
+      {/* Uslovno renderovanje Audio Narrator komponente */} 
+      {hasAudio && (
+        <AudioNarrator 
+          audioSr={postData.audioSr} 
+          audioEn={postData.audioEn} 
+          language={language} 
+        />
+      )}
 
       {/* Koristimo dangerouslySetInnerHTML za prikaz HTML sadržaja. */}
       {/* Ovo je bezbedno samo ako ste sigurni da HTML dolazi iz pouzdanog izvora (npr. vašeg CMS-a). */}
@@ -71,6 +90,7 @@ function BlogTemplatePage() {
         </Link>
       </footer>
     </article>
+    </>
   );
 }
 

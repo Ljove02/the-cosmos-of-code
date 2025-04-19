@@ -1,0 +1,174 @@
+.audio-narrator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 1px solid var(--border, #3a3f4a); /* Koristimo promenljivu ako postoji */
+  border-bottom: 1px solid var(--border, #3a3f4a);
+  margin-bottom: 30px; /* Razmak od glavnog sadržaja */
+  background-color: transparent; /* Pozadina - ispravljeno sa `var(--background, #05060f)` */
+  font-family: var(--font-body, sans-serif);
+  color: var(--foreground, #e0e0e0);
+  min-height: 60px; /* Minimalna visina */
+  position: relative; /* Za pozicioniranje toast poruke */
+}
+
+.narrator-left,
+.narrator-center,
+.narrator-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.narrator-left {
+  flex-shrink: 0; /* Sprečava smanjivanje levog dela */
+}
+
+.narrator-center {
+  flex-grow: 1; /* Zauzima slobodan prostor */
+  justify-content: left; 
+  padding-left: 10px;/* Centriranje u sredini */
+  padding: 0 15px; /* Razmak od leve i desne strane */
+}
+
+.narrator-right {
+  flex-shrink: 0; /* Sprečava smanjivanje desnog dela */
+  justify-content: flex-end;
+}
+
+.narrator-button {
+  background: none;
+  border: none;
+  color: inherit; /* Nasleđuje boju teksta */
+  cursor: pointer;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem; /* Veličina teksta/ikone */
+  transition: color 0.2s ease;
+}
+
+.narrator-button:hover {
+  color: #00adb5; /* Akcentna boja na hover */
+}
+
+.play-pause-button {
+  font-size: 1.2rem; /* Malo veća ikona */
+}
+
+.narrator-info,
+.narrator-duration {
+  font-size: 0.95rem;
+  color: #aaa; /* Svetlo siva za info/trajanje */
+  min-width: 100%; /* Osigurava prostor za tekst/tajmer */
+  text-align: left;
+  padding-left: 10px;
+}
+
+.separator {
+  color: #555; /* Tamnija siva za separator */
+  margin: 0 10px;
+}
+
+.speed-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.speed-button {
+  font-size: 0.9rem;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #aaa;
+}
+
+.speed-button.active-speed {
+  color: #00adb5; /* Akcentna boja za aktivnu brzinu */
+  font-weight: bold;
+  /* Opciono: text-decoration: underline; */
+}
+
+.share-button {
+  /* Dodatni stilovi ako su potrebni */
+}
+
+.share-button span {
+   margin-left: 5px;
+}
+
+/* Toast poruka */
+.toast-message {
+  position: absolute;
+  bottom: -50px; /* Počinje ispod vidljivog dela */
+  right: 20px;
+  background-color: #00adb5; /* Akcentna boja pozadine */
+  color: var(--background, #05060f); /* Boja teksta kontrasna pozadini */
+  padding: 8px 15px;
+  border-radius: 5px; /* Minimalno zaobljeno */
+  font-family: var(--font-mono, 'Roboto Mono', monospace); /* Postavljen Roboto Mono */
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  white-space: nowrap;
+  z-index: 10; /* Dodato da bude iznad ostalih elemenata */
+}
+
+.toast-message.visible {
+  bottom: 15px; /* Klizi nagore */
+  opacity: 1;
+}
+
+/* Responsivnost */
+@media (max-width: 600px) {
+  .audio-narrator {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .narrator-left,
+  .narrator-center,
+  .narrator-right {
+     /* Razvuci elemente */
+    padding: 0;
+  }
+
+  .narrator-center {
+    order: 2; /* Stavi brzinu/trajanje na dno */
+    justify-content: center; /* Centriraj */
+  }
+
+  .narrator-right {
+     order: 3; /* Stavi share u sredinu */
+     justify-content: flex-end; /* Poravnaj desno */
+  }
+
+  .narrator-left {
+    order: 1;
+  }
+
+  .narrator-button-share-button-span{
+    display: none;
+  }
+
+  .narrator-info {
+     min-width: auto; /* Ukloni min širinu */
+     text-align: left; /* Tekst/tajmer desno */
+     flex-grow: 1;
+  }
+
+  .separator {
+    display: none; /* Sakrij separator na mobilnom */
+  }
+
+  .toast-message {
+    right: 10px;
+    bottom: -50px; /* Resetuj za animaciju */
+  }
+   .toast-message.visible {
+     bottom: 10px;
+   }
+} 

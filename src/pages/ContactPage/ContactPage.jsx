@@ -11,6 +11,12 @@ function ContactPage() {
   }
 
   return (
+    <>
+    <title>Veljko Spasic | Contact</title>
+    <meta name="description" content="Feel free to reach out. I'm open to new projects, collaborations, or just connecting with like-minded people in tech."/>
+    <meta name="keywords" content="Veljko Spasic contact, software engineer collaboration, freelance developer, AI engineer Serbia, full stack developer contact, connect with Veljko Spasic"/>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.veljkospasic.com/contact" />
     <div className="contact-page">
       <article className="contact-content">
         <header>
@@ -28,6 +34,7 @@ function ContactPage() {
       </article>
      
     </div>
+    </>
   );
 }
 

@@ -5,6 +5,9 @@ export const allPosts = [
   {
     id: 1,
     slug: "startup-kamp-ntp-parkup",
+    description: "Moje Iskustvo na 'NTP ParkUp!' Kampu: Uvid u Svet Startupa",
+    keywords:
+      "NTP ParkUp!, startup kamp, startup, VR, ambliopija, investitori, timski rad, startup vrednosti",
     title: {
       sr: "Moje Iskustvo na 'NTP ParkUp!' Kampu: Uvid u Svet Startupa",
       en: `My Experience at the ‘NTP ParkUp!’ 
@@ -182,6 +185,8 @@ export const allPosts = [
       sr: "12 minuta",
       en: "12 minutes",
     },
+    audioSr: "/assets/blog_1/voice_over/ntpParkUp_sr.MP3", // Putanja iz public foldera
+    audioEn: "/assets/blog_1/voice_over/ntpParkUp_en.MP3",
   },
 
   // Dodajte još postova po potrebi

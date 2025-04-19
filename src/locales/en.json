@@ -45,5 +45,34 @@
     "githubPrompt": "Want to explore some of my chaotic code or personal experiments? <a href=\"https://github.com/Ljove02\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub's the spot</a>.",
     "callHeading": "Schedule a call?",
     "callPrompt": "Not really into putting my number out here, but just reach out and we'll find a time — chill and simple."
+  },
+  "audioNarrator": {
+    "listen": "Listen to article",
+    "share": "Share",
+    "linkCopied": "Link copied!"
+  },
+  "seo - landing page": {
+    "title": "Veljko Spasic | AI, Data Science & Full Stack",
+    "description": "I'm Veljko Spasic, a software engineer who enjoys combining AI, data science, and development into projects that make sense. I like technology, good ideas, and simple solutions.",
+    "keywords": "Veljko Spasic, software engineer, AI developer, data science engineer, full stack web developer, machine learning projects, personal tech blog, AI portfolio, Serbia developer, modern web applications",
+    "robots": "index, follow"
+  },
+  "seo - blog": {
+    "title": "Veljko Spasic | Blog",
+    "description": "I write about things that interest me — from artificial intelligence and data science to system design and personal projects. I document ideas, experiments, and thoughts on technology in motion.",
+    "keywords": "Veljko Spasic, tech blog, AI articles, data science writing, full stack development, personal projects, software engineering insights, machine learning blog, developer experiences, Serbia developer blog, startup",
+    "robots": "index, follow"
+  },
+  "seo - projects": {
+    "title": "Veljko Spasic | Projects",
+    "description": "Explore personal and collaborative projects where I build, test, and experiment with ideas in AI, data science, full stack development, and early-stage startup concepts.",
+    "keywords": "Veljko Spasic, AI projects, data science portfolio, full stack development, startup projects, collaborative tech work, personal software builds, software engineer Serbia",
+    "robots": "index, follow"
+  },
+  "seo - contact": {
+    "title": "Veljko Spasic | Contact",
+    "description": "Feel free to reach out. I'm open to new projects, collaborations, or just connecting with like-minded people in tech.",
+    "keywords": "Veljko Spasic contact, software engineer collaboration, freelance developer, AI engineer Serbia, full stack developer contact, connect with Veljko Spasic",
+    "robots": "index, follow"
   }
 }
