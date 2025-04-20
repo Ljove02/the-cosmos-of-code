@@ -182,8 +182,8 @@ export const allPosts = [
     category: "blog",
     date: "Aug, 27, 2024",
     readTime: {
-      sr: "12 minuta",
-      en: "12 minutes",
+      sr: "~6 minuta",
+      en: "~6 minutes",
     },
     audioSr: "/assets/blog_1/voice_over/ntpParkUp_sr.MP3", // Putanja iz public foldera
     audioEn: "/assets/blog_1/voice_over/ntpParkUp_en.MP3",
