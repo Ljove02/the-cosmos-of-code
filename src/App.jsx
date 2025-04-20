@@ -11,18 +11,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import backgroundImage from './assets/gbg.webp';
 import ContactPage from './pages/ContactPage';
+import { Analytics } from '@vercel/analytics/react';
 
-// Placeholder importi za stranice - kreiraćemo ih kasnije
-// import LandingPage from './pages/LandingPage';
-// import BlogMainPage from './pages/BlogMainPage';
-// import BlogTemplatePage from './pages/BlogTemplatePage';
-// import ProjectPage from './pages/ProjectPage';
-
-// Privremene komponente za testiranje ruta
-// const LandingPage = () => <div>Landing Page</div>;
-// const BlogMainPage = () => <div>Blog Main Page</div>;
-// const BlogTemplatePage = () => <div>Blog Template Page (e.g., /blog/my-first-post)</div>;
-// const ProjectPage = () => <div>Project Page</div>;
 
 // Podesive konstante za overlay efekat
 const OVERLAY_SCROLL_THRESHOLD_FACTOR = 0.5; // Prag na 50% visine viewporta
@@ -131,6 +121,7 @@ function App() {
     <LanguageProvider>
       <Router>
         <AppContent /> { /* Renderujemo novu komponentu unutar Routera */ }
+        <Analytics />
       </Router>
     </LanguageProvider>
   );
