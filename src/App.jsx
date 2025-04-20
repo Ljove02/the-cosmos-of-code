@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import backgroundImage from './assets/gbg.webp';
 import ContactPage from './pages/ContactPage';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 // Podesive konstante za overlay efekat
@@ -122,6 +123,7 @@ function App() {
       <Router>
         <AppContent /> { /* Renderujemo novu komponentu unutar Routera */ }
         <Analytics />
+        <SpeedInsights />
       </Router>
     </LanguageProvider>
   );
