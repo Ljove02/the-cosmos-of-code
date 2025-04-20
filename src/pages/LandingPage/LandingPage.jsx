@@ -20,7 +20,7 @@ function LandingPage() {
     t.introduction.type4  
   ];
 
-  const subheadingText = "Software Engineer | Full Stack Developer | AI Enthusiast";
+  const subheadingText = "Software Engineer | AI Builder & Tinkerer | Startup Explorer";
 
   return (
     <>
