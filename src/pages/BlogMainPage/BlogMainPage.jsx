@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage, useTranslations } from '../../hooks/useTranslations';
-import { allPosts } from '../../data/Posts'; // Import podataka
+import { allPosts } from '../../data/blog-posts'; // Updated import path
 import './BlogMainPage.css';
 
 // Privremeni podaci - Idealno bi dolazili iz API-ja ili CMS-a
