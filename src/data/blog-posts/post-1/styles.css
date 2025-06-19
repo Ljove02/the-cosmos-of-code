@@ -1,0 +1,88 @@
+/* Custom styles for NTP ParkUp blog post */
+
+/* Main image styles */
+.post-1 .post-content-main_image_img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Secondary image styles */
+.post-1 .post-content-main_image_img_2 {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Team and mentor image styles */
+.post-1 .post-content-main_image_img_3 {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Roleplay activity image styles */
+.post-1 .post-content-main_image_img_4 {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Pitching image styles */
+.post-1 .post-content-main_image_img_5 {
+  max-width: 30%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Team values image styles */
+.post-1 .post-content-main_image_img_6 {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  margin: 20px auto;
+}
+
+/* Image description styles */
+.post-1 .description-of-image {
+  text-align: center;
+  color: #ddd;
+  font-size: 0.9em;
+  margin: 5px 0 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-1 .post-content-main_image_img {
+    max-width: 95%;
+  }
+  
+  .post-1 .post-content-main_image_img_2,
+  .post-1 .post-content-main_image_img_5 {
+    max-width: 60%;
+  }
+  
+  .post-1 .post-content-main_image_img_3,
+  .post-1 .post-content-main_image_img_4,
+  .post-1 .post-content-main_image_img_6 {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-1 .post-content-main_image_img_2,
+  .post-1 .post-content-main_image_img_5 {
+    max-width: 80%;
+  }
+} 
